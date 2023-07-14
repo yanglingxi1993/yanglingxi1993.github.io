@@ -1,5 +1,7 @@
 # Research by Nicolas Wu
 
+[Vulnerabilities](https://yanglingxi1993.github.io/vulnerabilities/)  
+
 2023-07:  
 [Dirty Pagetable: A Novel Exploitation Technique To Rule Linux Kernel](https://yanglingxi1993.github.io/dirty_pagetable/dirty_pagetable.html)  
 
