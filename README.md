@@ -1,10 +1,10 @@
 # Research by Nicolas Wu
 
-2023-07:
+2023-07:  
 [Dirty Pagetable: A Novel Exploitation Technique To Rule Linux Kernel](https://yanglingxi1993.github.io/dirty_pagetable/dirty_pagetable.html)  
 
 
-2022-10:
+2022-10:  
 ARM Mali vulnerabilities:  
 [CVE-2022-41757: Mali GPU driver makes read-only imported pages host-writable](https://yanglingxi1993.github.io/arm_mali_vulns/CVE-2022-41757/)  
 [nday_OOB_read](https://yanglingxi1993.github.io/arm_mali_vulns/nday_OOB_read/)  
