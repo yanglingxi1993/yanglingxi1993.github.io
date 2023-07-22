@@ -20,7 +20,10 @@ ARM Mali vulnerabilities:
 2022-05:  
 [ExplosION: The Hidden Mines in the Android ION Driver](https://blackhat.com/asia-22/briefings/schedule/index.html#explosion-the-hidden-mines-in-the-android-ion-driver-25848)  
 
-2020.11:  
+2021-09:  
+[攻防视角下的mtk安全启动](https://yanglingxi1993.github.io/slides/%E6%94%BB%E9%98%B2%E8%A7%86%E8%A7%92%E4%B8%8B%E7%9A%84mtk%E5%AE%89%E5%85%A8%E5%90%AF%E5%8A%A8.pdf)  
+
+2020-11:  
 ["徒手带走"mtk_cmdq驱动](https://yanglingxi1993.github.io/slides/%E5%BE%92%E6%89%8B%E5%B8%A6%E8%B5%B0mtk_cmdq%E9%A9%B1%E5%8A%A8.pdf)  
 
 2019-07:  
