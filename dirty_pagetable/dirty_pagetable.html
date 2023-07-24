@@ -1,0 +1,1900 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAABE0AA8AAAAAHWwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABWAAAADsAAABUIIslek9TLzIAAAGUAAAAQwAAAFY3d1HZY21hcAAAAdgAAACqAAACOvWLi0FjdnQgAAAChAAAABMAAAAgBtX/BGZwZ20AAAKYAAAFkAAAC3CKkZBZZ2FzcAAACCgAAAAIAAAACAAAABBnbHlmAAAIMAAABdQAAAjkYT9TNWhlYWQAAA4EAAAAMwAAADYQ6WvNaGhlYQAADjgAAAAfAAAAJAc6A1pobXR4AAAOWAAAACAAAAA0Kmz/7mxvY2EAAA54AAAAHAAAABwQPBJubWF4cAAADpQAAAAgAAAAIAEHC/NuYW1lAAAOtAAAAYQAAALxhQT4h3Bvc3QAABA4AAAAfgAAAMS3SYh9cHJlcAAAELgAAAB6AAAAhuVBK7x4nGNgZGBg4GIwYLBjYHJx8wlh4MtJLMljkGJgYYAAkDwymzEnMz2RgQPGA8qxgGkOIGaDiAIAJjsFSAB4nGNgZHZmnMDAysDAVMW0h4GBoQdCMz5gMGRkAooysDIzYAUBaa4pDA4Pwz+yMwf9z2KIYg5imAYUZgTJAQDcoQvQAHic7ZHNDYJAFIRnBXf94cDRIiyCKkCpwFCPJ092RcKNDoYKcN4+EmMPvpdvk539zQyAPYBCXEUJhBcCrJ5SQ9YLnLJe4qF5rdb+uWPDngNHTkta101pNyWa8lMhn6xx2dqUnW4q9YOIhAOOeueMSgsR/6ry+P7O5s6xVNg4chBsHUuFnWNJ8uZYwrw7chrsHXkODo7cB0dHOYCTY8kv0VE2WJKD6gOlWjsxAAB4nGNgQAMSEMgc9D8LhAESbAPdAHicrVZpd9NGFB15SZyELCULLWphxMRpsEYmbMGACUGyYyBdnK2VoIsUO+m+8Ynf4F/zZNpz6Dd+Wu8bLySQtOdwmpOjd+fN1czbZRJaktgL65GUmy/F1NYmjew8CemGTctRfCg7eyFlisnfBVEQrZbatx2HREQiULWusEQQ+x5ZmmR86FFGy7akV03KLT3pLlvjQb1V334aOsqxO6GkZjN0aD2yJVUYVaJIpj1S0qZlqPorSSu8v8LMV81QwohOImm8GcbQSN4bZ7TKaDW24yiKbLLcKFIkmuFBFHmU1RLn5IoJDMoHzZDyyqcR5cP8iKzYo5xWsEu20/y+L3mndzk/sV9vUbbkQB/Ijuzg7HQlX4RbW2HctJPtKFQRdtd3QmzZ7FT/Zo/ymkYDtysyvdCMYKl8hRArP6HM/iFZLZxP+ZJHo1qykRNB62VO7Es+gdbjiClxzRhZ0N3RCRHU/ZIzDPaYPh788d4plgsTAngcy3pHJZwIEylhczRJ2jByYCVliyqp9a6YOOV1WsRbwn7t2tGXzmjjUHdiPFsPHVs5UcnxaFKnmUyd2knNoykNopR0JnjMrwMoP6JJXm1jNYmVR9M4ZsaERCICLdxLU0EsO7GkKQTNoxm9uRumuXYtWqTJA/Xco/f05la4udNT2g70s0Z/VqdiOtgL0+lp5C/xadrlIkXp+ukZfkziQdYCMpEtNsOUgwdv/Q7Sy9eWHIXXBtju7fMrqH3WRPCkAfsb0B5P1SkJTIWYVYhWQGKta1mWydWsFqnI1HdDmla+rNMEinIcF8e+jHH9XzMzlpgSvt+J07MjLj1z7UsI0xx8m3U9mtepxXIBcWZ5TqdZlu/rNMfyA53mWZ7X6QhLW6ejLD/UaYHlRzodY3lBC5p038GQizDkAg6QMISlA0NYXoIhLBUMYbkIQ1gWYQjLJRjC8mMYwnIZhrC8rGXV1FNJ49qZWAZsQmBijh65zEXlaiq5VEK7aFRqQ54SbpVUFM+qf2WgXjzyhjmwFkiXyJpfMc6Vj0bl+NYVLW8aO1fAsepvH472OfFS1ouFPwX/1dZUJb1izcOTq/Abhp5sJ6o2qXh0TZfPVT26/l9UVFgL9BtIhVgoyrJscGcihI86nYZqoJVDzGzMPLTrdcuan8P9NzFCFlD9+DcUGgvcg05ZSVnt4KzV19uy3DuDcjgTLEkxN/P6VvgiI7PSfpFZyp6PfB5wBYxKZdhqA60VvNknMQ+Z3iTPBHFbUTZI2tjOBIkNHPOAefOdBCZh6qoN5E7hhg34BWFuwXknXKJ6oyyH7kXs8yik/Fun4kT2qGiMwLPZG2Gv70LKb3EMJDT5pX4MVBWhqRg1FdA0Um6oBl/G2bptQsYO9CMqdsOyrOLDxxb3lZJtGYR8pIjVo6Of1l6iTqrcfmYUl++dvgXBIDUxf3vfdHGQyrtayTJHbQNTtxqVU9eaQ+NVh+rmUfW94+wTOWuabronHnpf06rbwcVcLLD2bQ7SUiYX1PVhhQ2iy8WlUOplNEnvuAcYFhjQ71CKjf+r+th8nitVhdFxJN9O1LfR52AM/A/Yf0f1A9D3Y+hyDS7P95oTn2704WyZrqIX66foNzBrrblZugbc0HQD4iFHrY64yg18pwZxeqS5HOkh4GPdFeIBwCaAxeAT3bWM5lMAo/mMOT7A58xh0GQOgy3mMNhmzhrADnMY7DKHwR5zGHzBnHWAL5nDIGQOg4g5DJ4wJwB4yhwGXzGHwdfMYfANc+4DfMscBjFzGCTMYbCv6dYwzC1e0F2gtkFVoANTT1jcw+JQU2XI/o4Xhv29Qcz+wSCm/qjp9pD6Ey8M9WeDmPqLQUz9VdOdIfU3Xhjq7wYx9Q+DmPpMvxjLZQa/jHyXCgeUXWw+5++J9w/bxUC5AAEAAf//AA94nIVVX2hbZRQ/5/t7893s5ja9f7ouzdZ0TTqz3bRJmogbWya6bG6Cq0VbSV2ddIJjFtfIQHEig80Hda8yUN/0YQz8AyriiyD+xQd92R4HCnaCb3samnpumrpsCsLlfPf7zvedc37nL3CAtc/5W/wQZGA3tOBSY/g+TMjHmwzEoM1Q8+ZjRZY4oJhmBw5/YB6Za0yC5AkhlwA1A1yCBIBOwCII0Cj0U8BAMdUCzq05sKwkP7SlUY6fcJk4Fb/RyE79/6P5hjM/F4aZiXBoeMgzcqQ4Xi1hPqfDLG5FT+lchCVU3lYMyvuwhl1mqndQL0RsuloLywHtthLXI06OblTrhfWVnpSJ5+mwu/JdbtuN3IAnkW0LLMcRwaC7ktrlzridM6kVdyf9uO1UNBByI7JhwtG2sEwab07ORBeilWhqavJCqV0qzZTOl/7ZXQ5TbTcdcFelyGhhRDAQpdqp1FEX3w3cFTc1k9pJQkmm4ySCbSikxRP2QOfN+0tHS5MrpQuTU1Mk5nw0E5Xa0WvrOwDyGax9yB9ma6DAg82wHc43SAGTI4GjBWebOePAERFE8/AHaQpZASSTy8A4WwZiLQMQ82mFKATO0ILicRAoDm9p5P99E5b/fXG+kQYY3TYUuqmERWYoT0u/GNYL2q/4WB3LaVS+VynXsVYIcWw6DkCh3nX1D+VzlYN4LClF5yexSQos8exqZ3KVP+wtrC54u4Nznq6cq+xpMpUUnZ8FUYzE86ud0g28NOIv3Gj5/rmA3ABs7S/ywzFuQ4qyd6QxfNtiQIaEgp3w/entQg4Vcbqa16M5FfpeUB8t1+qeg7mI7cUyOe79wOk86gSxkVec4KPTX69++5x68Yubn5/F+w52z7u08sJX7fZXv8ekT/d2mILJxq6sn+SC6qEJknzLJCxyZEKwWVqYmAPBxBE/9DLeZiWHu7lcr/VytrCRuHojncNuTt9h46tmacmYisnSamdN2bZptcsmSysdVsy1PrOvOzF3xN64Rb937t/og9KHxYdcjIUqFAmIAHGHNzlns+RTPgeUYAQm9DwpNxfxbhhBHPaw3/gfTcXO2L+eJVIx5nsyGkvm9X4/f+bGkH45G0PaSjcMXTjcZyTvi3UdHoCDjQd3IDUVsgwYmUoJK/gp4JJxeRI0MKHZIkgynyIBqBTOUs6rOVCojvjZ4mCQz49ZMlMcp8QoYk6NoBfsxnJtsBohpa8iGJS+ZH7gU7NxME6cmF+t7cO9vB8d3jTWSct0ycW9ranXmolNDwmVkNnxe+8JtoztwS5rKJ0xWS95tQ/1zMYzg69MzUZnNtl1ofNbsml/OJm6f9wjRjpnu2o4MzHzn77IQkRd+1DjwMQ2pqSjGMMhyjrgTbBAKksuUm0iU7hI0aN2wOKOq7WYBSH0HGihj/jkiPxAfmwsEbfYrjMG+j3ij932Db/LV7I/xruNrhnroxjR9HRMb2nTvO0ZXOoHPk8H2ZhDPx93qcE/53sH5np/dkIP7zzhTVKdR/BAY/9ElkkR+A6lJGsqpJ4oQcTxpvBT3Kn58VkaJjgHyPEIws57xkaHh9KuVpDEpJZeMbZ5w/zBHi5NMQ4r5VphsFqID7TyB9eR4pX216c3AHxpdAwoqU9qg0ZJ6yVLKmMSz1iG2z27ifx18NkY0LPx1W/wCc2l5LrznrIsiKsqbmB78A9wIGx4tI8rjihVHJyY9pgMirenVq0yWg7Iw7eogG7ZgYM3qR9959A/fZkg6MnD/exlkmc+jWV4SB15XUR+eqC6l6ZmgPtN9z5JMfik05OV8ljylunJ4J+wA/FUaQSSKotsYsCWqaPBidBLcxkWx7XKFRIb45TGaEhjlF9uUVPqXOtcIwsXbBvfoZXIyRYFdkfnqjExH98xpnPczqzjX/uNdO1Y17Wpi5+6Ts8BXtjVFasp9KZ1mOiNbH65c5w6HgmyF2jFCZywM8mWjRc7T5Pmt0lRy7Y71+jYbpGyvwG4sH0XeJxjYGRgYADiwBB/53h+m68M3MwvgCIM1z5N/g6j///9v5H5BbMnkMvBwAQSBQCIcA9gAHicY2BkYGAO+p8FJF/8//v/F/MLBqAICuAFALYQB5kAeJxjfsHAwLwAiCNB+P9fbJjJmoGBMRUo/wKCAfO2EnQAAAAAANoBXgGcAgICVALaA1IDvAPkBAYEPARyAAEAAAANAF0ABAAAAAAAAgAUACQAcwAAAG4LcAAAAAB4nHWRzWrCQBSFT+pPqUIXLXTTzayKUohGKIibCoLuhbrrYtTRxCYZmYyKyz5Fd32HvlDfoO/QkziIFJtw9bvnnpl7ZwLgBt/wcHieGAf2UGd24Atcou+4RH3kuEweO66QXx1XyaHjGh6ROa7jFp/cwStfMVvhy7GHO+/e8QWuvcBxifqz4zL5xXGF/Oa4Sn53XMPE+3Bcx4P3M9DrvYmWoRWNQVN02kFXTPdCU4pSGQu5saE2meiLhU6timPtz3SSs9ypTCdqrJabWJoT5QQnymSRTkXgt0/UkUqVkVbN807ZdtmxdiEWRidi6HqItdErNbN+aO2612qd9sYAGmvsYRBhyUu0EGhQbfK/gzYCdElTOgSdB1eEFBIxFYkNV4RFJWPeZyyYpVQVHTHZx4y/yVGX2LGWFZri51TccUOn5B7nPefVCSPvGhVVwUl9znveO2KkhV8Wk82PZ8qwZf8OVcu1+fSmWCMw/HMOwXvKaysqM+p+cVuWag8tvv+c+xdd+4+teJxtjUEOwiAURJla24KliQfhUA2g/Sl+CKXx+loNrpzVezOLEY34Ron/0WhwQoszOvQYIKFwwQiNSbSBeO2SZ0tBP4j3zVjKNng32ZmtD1VVXCuOiw/pJ8S3WOU6l+K5UOTaDC4+2TjKMtN9KQf1ezLx/Sg/00FCvABHhjDjAAB4nGPw3sFwIihiIyNjX+QGxp0cDBwMyQUbGVidNjEwMmiBGJu5mBg5ICw+BjCLzWkX0wGgNCeQze60i8EBwmZmcNmowtgRGLHBoSNiI3OKy0Y1EG8XRwMDI4tDR3JIBEhJJBBs5mFi5NHawfi/dQNL70YmBhcADHYj9AAA) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable,
+.markdown-body .highlighttable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr,
+.markdown-body .highlighttable {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite,
+.markdown-body .highlighttable pre,
+.markdown-body .highlighttable div.highlight {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td,
+.markdown-body .highlighttable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite,
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+.markdown-body diagram-div, .markdown-body div.uml-sequence-diagram, .markdown-body, div.uml-flowchart {
+  overflow: auto;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.highlight {background-color:#fff;color:#333333;}
+.highlight .hll {background-color:#ffffcc;}
+.highlight .c{color:#999988;font-style:italic}
+.highlight .err{color:#a61717;background-color:#e3d2d2}
+.highlight .k{font-weight:bold}
+.highlight .o{font-weight:bold}
+.highlight .cm{color:#999988;font-style:italic}
+.highlight .cp{color:#999999;font-weight:bold}
+.highlight .c1{color:#999988;font-style:italic}
+.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
+.highlight .gd{color:#000000;background-color:#ffdddd}
+.highlight .ge{font-style:italic}
+.highlight .gr{color:#aa0000}
+.highlight .gh{color:#999999}
+.highlight .gi{color:#000000;background-color:#ddffdd}
+.highlight .go{color:#888888}
+.highlight .gp{color:#555555}
+.highlight .gs{font-weight:bold}
+.highlight .gu{color:#800080;font-weight:bold}
+.highlight .gt{color:#aa0000}
+.highlight .kc{font-weight:bold}
+.highlight .kd{font-weight:bold}
+.highlight .kn{font-weight:bold}
+.highlight .kp{font-weight:bold}
+.highlight .kr{font-weight:bold}
+.highlight .kt{color:#445588;font-weight:bold}
+.highlight .m{color:#009999}
+.highlight .s{color:#dd1144}
+.highlight .n{color:#333333}
+.highlight .na{color:teal}
+.highlight .nb{color:#0086b3}
+.highlight .nc{color:#445588;font-weight:bold}
+.highlight .no{color:teal}
+.highlight .ni{color:purple}
+.highlight .ne{color:#990000;font-weight:bold}
+.highlight .nf{color:#990000;font-weight:bold}
+.highlight .nn{color:#555555}
+.highlight .nt{color:navy}
+.highlight .nv{color:teal}
+.highlight .ow{font-weight:bold}
+.highlight .w{color:#bbbbbb}
+.highlight .mf{color:#009999}
+.highlight .mh{color:#009999}
+.highlight .mi{color:#009999}
+.highlight .mo{color:#009999}
+.highlight .sb{color:#dd1144}
+.highlight .sc{color:#dd1144}
+.highlight .sd{color:#dd1144}
+.highlight .s2{color:#dd1144}
+.highlight .se{color:#dd1144}
+.highlight .sh{color:#dd1144}
+.highlight .si{color:#dd1144}
+.highlight .sx{color:#dd1144}
+.highlight .sr{color:#009926}
+.highlight .s1{color:#dd1144}
+.highlight .ss{color:#990073}
+.highlight .bp{color:#999999}
+.highlight .vc{color:teal}
+.highlight .vg{color:teal}
+.highlight .vi{color:teal}
+.highlight .il{color:#009999}
+.highlight .gc{color:#999;background-color:#EAF2F5}
+</style><title>Dirty_Pagetable</title></head><body><article class="markdown-body"><h1 id="dirty-pagetable-a-novel-exploitation-technique-to-rule-linux-kernel">Dirty Pagetable: A Novel Exploitation Technique To Rule Linux Kernel<a class="headerlink" href="#dirty-pagetable-a-novel-exploitation-technique-to-rule-linux-kernel" title="Permanent link"></a></h1>
+<p><p align="right"><strong><em>by Nicolas Wu(<a href="https://twitter.com/NVamous">@NVamous</a>)</em></strong></p></p>
+<h2 id="1-introduction-to-dirty-pagetable">1. Introduction to Dirty Pagetable<a class="headerlink" href="#1-introduction-to-dirty-pagetable" title="Permanent link"></a></h2>
+<p>Dirty Pagetable is a new novel kernel exploitation method. The idea of the exploitation method is to employ heap-based vulnerabilities to manipulate user page tables, which gives us a powerful primitive: read/write arbitrary physical addresses. We name the method Dirty Pagetable. Dirty Pagetable has many attractive advantages compared to the existing kernel exploitation methods. First, it is a data-only exploitation technique, so it can naturally bypass many powerful mitigation techniques like CFI, KASLR, SMAP/PAN, etc. This feature can also help us develop a universal exploit. Second, it&rsquo;s a powerful exploitation method that can still be applied to the latest Linux kernel. As we know, Kernel Space Mirroring Attack(KSMA) is a powerful kernel exploitation method that has been widely used for years. However, it has been mitigated on newer Linux kernel. But Dirty Pagetable still works, achieving the same effect like a charm. Third, it can significantly improve the quality of exploitation of many heap-based vulnerabilities. We have noticed that many memory corruption vulnerabilities tend to be exploited by attacking the page cache of read-only binaries or libraries. This method requires much more work to get a complete privilege escalation on Android. But Dirty Pagetalbe can employ these heap-based vulnerabilities to attack kernel directly so that we can fulfill privilege escalation more conveniently.</p>
+<p>We fulfilled privilege escalation on the latest Google Pixel 7, Google&rsquo;s most secure and private phone yet. We finished the exploit with a 0-day vulnerability(CVE-2023-21400) we found recently, and we managed to bypass all the mitigation techniques deployed on Google Pixel 7. Moreover, we developed new exploits for two popular types of vulnerabilities: file UAF and pid UAF with Dirty Pagetable. Compared to those known exploits, Dirty Pagetable has pushed the exploitation of these vulnerabilities to the next level.</p>
+<p>The layout of the article is like:
+<div class="highlight"><pre>{
+    1. Introduction to Dirty Pagetable
+
+    2. An overview of how Dirty Pagetable works
+
+    3. Exploit a double-free vulnerability(CVE-2023-21400) with Dirty Pagetable
+        3.1 Root cause of CVE-2023-21400
+        3.2 Trigger the issue
+        3.3 Nice try for the issue
+        3.4 Is the issue exploitable?
+        3.5 Let&#39;s get root
+        3.6 Reflections
+
+    4. Exploit file UAF vulnerability with Dirty Pagetable
+        4.1. File UAF: One of the most popular vulnerabilities in recent years
+        4.2. Exploit the file UAF with Dirty Pagetable
+
+    5. Exploit pid UAF vulnerability with Dirty Pagetable
+        5.1 Brief introduction to CVE-2020-29661
+        5.2 Exploit CVE-2020-29661 with Dirty Pagetable
+
+    6. Challenges when exploiting with Dirty Pagetable
+        6.1 How to flush TLB and page table caches
+        6.2 How to prevent the unexpected actions on the page table during the privilege escalation
+
+    7. Mitigation for Dirty Pagetable
+
+    8. Acknowlegements
+
+    9. References
+}
+</pre></div></p>
+<h2 id="2-an-overview-of-how-dirty-pagetable-works">2. An overview of how Dirty Pagetable works<a class="headerlink" href="#2-an-overview-of-how-dirty-pagetable-works" title="Permanent link"></a></h2>
+<p>Dirty Pagetable could be used to exploit heap-based vulnerabilities like heap uaf, double free, and OOB vulnerabilities, etc. For a more straightforward explanation, we will take a common uaf vulnerability as an example to briefly describe how to exploit heap-based vulnerabilities with Dirty Pagetalbe step by step:</p>
+<h5 id="step-1-trigger-the-uaf-and-get-the-victim-slab-reclaimed-to-the-page-allocator">Step 1. Trigger the UAF and get the victim slab reclaimed to the page allocator<a class="headerlink" href="#step-1-trigger-the-uaf-and-get-the-victim-slab-reclaimed-to-the-page-allocator" title="Permanent link"></a></h5>
+<p>As we know, a uaf vulnerability would cause the release of a heap object which could be used later. We call this heap object the victim object. Because the Linux kernel uses the slab allocator to manage all kinds of heap objects, the victim object must belong to a heap slab which we call the victim slab, for a more straightforward explanation.</p>
+<p>By triggering the uaf, we will get the victim object released. After that, if we continue to release all the other objects in the victim slab, the victim slab will become empty, and this could get the victim slab reclaimed to the page allocator(Many researchers have talked about how to let an empty slab be reclaimed by page allocator quickly and stably, so no more discussion here)</p>
+<p>For now, we have reclaimed the victim slab to the page allocator.</p>
+<h5 id="step-2-occupy-the-victim-slab-with-user-page-tables">Step 2. Occupy the victim slab with user page tables<a class="headerlink" href="#step-2-occupy-the-victim-slab-with-user-page-tables" title="Permanent link"></a></h5>
+<p>Because user page tables are allocated from the page allocator directly, we can occupy the victim slab with user page tables by allocating many user page tables at once. Please note that we are using last-level page tables here.</p>
+<p>Once we succeed in occupying the victim slab with user page tables, we could get such a scene:</p>
+<p><center>
+<img alt="figure1" height="60%" src="./assets/pic1_occupy_with_pagetable.svg" title="figure1" width="60%" />
+</center>
+<center>Figure 1</center></p>
+<p>As you can see, the victim object is located in a user page table.</p>
+<h5 id="step-3-construct-the-primitive-for-manipulating-the-page-table-entrypte">Step 3. Construct the primitive for manipulating the Page Table Entry(PTE)<a class="headerlink" href="#step-3-construct-the-primitive-for-manipulating-the-page-table-entrypte" title="Permanent link"></a></h5>
+<p>After step 2, it&rsquo;s obvious that if we can construct a write primitive with the victim object, we can modify the Page Table Entry(PTE) as we want. </p>
+<p>Constructing a proper primitive with the victim object to modify the PTE is a challenge in Dirty Pagetable. We will discuss how to solve this challenge in the following sections: The section &ldquo;Exploit a double-free vulnerability(CVE-2023-21400) with Dirty Pagetable&rdquo; will present how we convert the double-free vulnerability to a write primitive for manipulating PTE. The section &ldquo;Exploit file UAF vulnerability with Dirty Pagetable&rdquo; and &ldquo;Exploit pid UAF vulnerability with Dirty Pagetable&rdquo; will present how we convert the use-after-free vulnerability to an increment primitive for manipulating PTE. </p>
+<p>We can assume that we have obtained a write primitive to manipulate PTE in the user page table.</p>
+<h5 id="step-4-modify-pte-to-patch-the-kernel">Step 4. Modify PTE to patch the kernel<a class="headerlink" href="#step-4-modify-pte-to-patch-the-kernel" title="Permanent link"></a></h5>
+<p>After step 3, we get the ability to control a PTE. By setting the physical address of the PTE to the physical address of kernel text/data, we can patch the kernel as we want!</p>
+<p>To fulfill the privilege escalation, we choose to patch a few syscalls, including setresuid(), setresgid(), etc., so we can call them from an unprivileged process. We might need to patch SELinux related variables to disable SELinux if it&rsquo;s enabled.</p>
+<h5 id="step5-get-root">Step5. Get root<a class="headerlink" href="#step5-get-root" title="Permanent link"></a></h5>
+<p>Since setresuid(), and setresgid() have been patched, we can get root by calling the following code directly:
+<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">setresuid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">&quot;setresuid&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">setresgid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;setresgid&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[+] Spawn a root shell</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">system</span><span class="p">(</span><span class="s">&quot;/system/bin/sh&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<p>These five steps show the briefest procedure of Dirty Pagetable. In the following sections, we will discuss how Dirty Pagetable works with specific vulnerabilities in detail.</p>
+<h2 id="3-exploit-a-double-free-vulnerabilitycve-2023-21400-with-dirty-pagetable">3. Exploit a double-free vulnerability(CVE-2023-21400) with Dirty Pagetable<a class="headerlink" href="#3-exploit-a-double-free-vulnerabilitycve-2023-21400-with-dirty-pagetable" title="Permanent link"></a></h2>
+<p>CVE-2023-21400 is a double free vulnerability in io_uring. It&rsquo;s found by Ye Zhang(<a href="https://twitter.com/VAR10CK">@VAR10CK</a>) and me last year, affecting kernel 5.10. The exploitation for it is sort of tortuous, but glad we finally made it! Let&rsquo;s see how we exploit CVE-2023-21400 with Dirty Pagetable on Google Pixel 7.</p>
+<h3 id="31-root-cause-of-cve-2023-21400">3.1 Root cause of CVE-2023-21400<a class="headerlink" href="#31-root-cause-of-cve-2023-21400" title="Permanent link"></a></h3>
+<p>In io_uring, when we submit a request with <code>IOSQE_IO_DRAIN</code> enabled, the request will not be started before previously submitted requests have been completed. As a result, the request will be deferred. The deferred request will be added to the <code>defer_list</code> of the <code>io_ring_ctx</code> as an <code>io_defer_entry</code> object:</p>
+<p><center>
+<img alt="figure2" src="./assets2/pic1_defer_list.svg" title="figure2" />
+</center>
+<center>Figure 2</center></p>
+<p>The <code>io_defer_entry</code> representing the deferred request will be removed from the <code>defer_list</code> right after a previously submitted request has been completed. Because the <code>defer_list</code> can be accessed concurrently, it must be protected by the spinlock <code>completion_lock</code> when accessing. However, there is a case in which the <code>defer_list</code> is processed without holding the <code>completion_lock</code>. In the io_uring with <code>IORING_SETUP_IOPOLL</code> enabled, we can try to get event completions by calling the syscall <code>io_uring_enter</code> with <code>IORING_ENTER_GETEVENTS</code>, and this will trigger the routine:<code>io_uring_enter()-&gt;io_iopoll_check()-&gt;io_iopoll_getevents()-&gt;io_do_iopoll()-&gt;io_iopoll_complete()-&gt;io_commit_cqring()-&gt;__io_queue_deferred()</code>.
+<div class="highlight"><pre>static void __io_queue_deferred(struct io_ring_ctx *ctx)
+{
+    do {
+        struct io_defer_entry *de = list_first_entry(&amp;ctx-&gt;defer_list,
+                        struct io_defer_entry, list);
+        if (req_need_defer(de-&gt;req, de-&gt;seq))
+            break;
+        list_del_init(&amp;de-&gt;list);
+        io_req_task_queue(de-&gt;req);
+        kfree(de);
+    } while (!list_empty(&amp;ctx-&gt;defer_list));
+}
+</pre></div>
+In the __io_queue_deferred(), it will get the <code>io_defer_entry</code> objects from <code>ctx-&gt;defer_list</code> and the associated requests will be queued for task_work_run(). As you can see that the <code>ctx-&gt;defer_list</code> gets accessed without holding the <code>ctx-&gt;completion_lock</code>. This can cause issues in a race condition.
+Except from the __io_queue_deferred(), the function io_cancel_defer_files() can also process the <code>ctx-&gt;defer_list</code>:
+<div class="highlight"><pre>static void io_cancel_defer_files(struct io_ring_ctx *ctx,
+                  struct task_struct *task,
+                  struct files_struct *files)
+{
+    struct io_defer_entry *de = NULL;
+    LIST_HEAD(list);
+    spin_lock_irq(&amp;ctx-&gt;completion_lock);
+    list_for_each_entry_reverse(de, &amp;ctx-&gt;defer_list, list) {
+        if (io_match_task(de-&gt;req, task, files)) {
+            list_cut_position(&amp;list, &amp;ctx-&gt;defer_list, &amp;de-&gt;list);
+            break;
+        }
+    }
+    spin_unlock_irq(&amp;ctx-&gt;completion_lock);
+    while (!list_empty(&amp;list)) {
+        de = list_first_entry(&amp;list, struct io_defer_entry, list);
+        list_del_init(&amp;de-&gt;list);
+        req_set_fail_links(de-&gt;req);
+        io_put_req(de-&gt;req);
+        io_req_complete(de-&gt;req, -ECANCELED);
+        kfree(de);
+    }
+}
+</pre></div>
+The function io_cancel_defer_files() can be triggered in two ways. The first way is through do_exit() and the calling routine is <code>do_exit()-&gt;io_uring_files_cancel()-&gt;__io_uring_files_cancel()-&gt;io_uring_cancel_task_requests()-&gt;io_cancel_defer_files()</code>. The second way is through execve() and the calling routine is <code>execve()-&gt;do_execve()-&gt;do_execveat_common()-&gt;bprm_execve()-&gt;io_uring_task_cancel()-&gt;__io_uring_task_cancel()-&gt;__io_uring_files_cancel()-&gt;io_uring_cancel_task_requests()-&gt;io_cancel_defer_files()</code>. Comparing with the first way, the second way doesn&rsquo;t require us to exit current task, so it could be more controllable. We will use the second way to trigger io_cancel_defer_files().
+Since we have got two routines that can process <code>ctx-&gt;defer_list</code> at the same time, we can construct such a race condition easily:
+<div class="highlight"><pre>iopoll  Task                                                exec Task
+(cpu A)                                                     (cpu B)
+
+A1.create a `io_ring_ctx` with
+IORING_SETUP_IOPOLL enabled by io_uring_setup();
+
+A2.generate an `io_defer_entry` object,
+it will be added to `ctx-&gt;defer_list`
+
+A3.trigger the __io_queue_deferred();          &lt;--------&gt;   B1.trigger the io_cancel_defer_files();
+</pre></div>
+The race condition is supposed to trigger memory corruption because both tasks are processing the same list concurrently. But it is not the truth. In general, io_cancel_defer_files() only processes the defer list of <code>io_ring_ctx</code> which was created by the current task. So the io_cancel_defer_files() in the exec task won&rsquo;t process the same defer list in the iopoll task. However, there is an exception. If we submit a request with IOSQE_IO_DRAIN enabled to the <code>io_ring_ctx</code> of iopoll task in the exec task, we can manage to let io_cancel_defer_files() in the exec task process the defer list of the <code>io_ring_ctx</code>. So the new race condition becomes this:
+<div class="highlight"><pre>iopoll Task                                            exec Task
+(cpu A)                                                (cpu B)
+
+A1.create a `io_ring_ctx` by io_uring_setup();
+
+A2.generate an `io_defer_entry` object,
+it will be added into `ctx-&gt;defer_list`
+                                                       B1.submit a request with IOSQE_IO_DRAIN
+                                                       enabled to the `io_ring_ctx`
+                                                        (this will generate another `io_defer_entry`
+                                                         object to be added into `ctx-&gt;defer_list`)
+
+
+A3.trigger the __io_queue_deferred();   &lt;--------&gt;     B2.trigger the io_cancel_defer_files();
+</pre></div>
+In this race condition, memory corruption can be triggered when the exec task and the iopoll task are processing the defer list at the same time.</p>
+<h3 id="32-trigger-the-issue">3.2 Trigger the issue<a class="headerlink" href="#32-trigger-the-issue" title="Permanent link"></a></h3>
+<p>Although the issue can be triggered in a race condition, there is no guarantee as to when the io_cancel_defer_files() and __io_queue_deferred() will be triggered. So we have to force the memory corruption to happen by repeating the operations in the exec task and the iopoll task like this:
+<div class="highlight"><pre>iopoll Task                                            exec Task
+(cpu A)                                                (cpu B)
+while(1) { //&lt;----- repeat                             while(1) { //&lt;----- repeat
+  A1.create a `io_ring_ctx` by io_uring_setup();
+
+  A2.generate an `io_defer_entry` object,
+  it will be added into `ctx-&gt;defer_list`
+                                                         B1.submit a request with IOSQE_IO_DRAIN enabled
+                                                         to the `io_ring_ctx`
+                                                          (this will generate another `io_defer_entry`
+                                                          object to be added into `ctx-&gt;defer_list`)
+
+
+  A3.trigger the __io_queue_deferred();   &lt;--------&gt;     B2.trigger the io_cancel_defer_files();
+}                                                      }
+</pre></div>
+By performing such a strategy we can get two kinds of crashes.
+The first crash is due to an invalid list. We know that __io_queue_deferred() and io_cancel_defer_files() are racing each other. Both functions would traverse the <code>ctx-&gt;defer_list</code> and remove objects from it, so the <code>ctx-&gt;defer_list</code> can be invalid sometimes. Once the <code>ctx-&gt;defer_list</code> becomes invalid, the __list_del_entry_valid() would force the kernel panic to happen. Obviously, this kind of crash is not exploitable.
+The second crash is due to the double free. Let&rsquo;s have a look at such a scenario:
+<div class="highlight"><pre><span class="n">iopoll</span> <span class="n">Task</span>                                          <span class="n">exec</span> <span class="nf">Task</span>
+<span class="p">(</span><span class="n">cpu</span> <span class="n">A</span><span class="p">)</span>                                              <span class="p">(</span><span class="n">cpu</span> <span class="n">B</span><span class="p">)</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">__io_queue_deferred</span><span class="p">(</span><span class="k">struct</span> <span class="n">io_ring_ctx</span> <span class="o">*</span><span class="n">ctx</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">io_defer_entry</span> <span class="o">*</span><span class="n">de</span> <span class="o">=</span> <span class="n">list_first_entry</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">defer_list</span><span class="p">,</span>
+                        <span class="k">struct</span> <span class="n">io_defer_entry</span><span class="p">,</span> <span class="n">list</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">req_need_defer</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">,</span> <span class="n">de</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">))</span>
+            <span class="k">break</span><span class="p">;</span>
+
+                                        <span class="k">static</span> <span class="kt">void</span> <span class="n">io_cancel_defer_files</span><span class="p">(</span><span class="k">struct</span> <span class="n">io_ring_ctx</span> <span class="o">*</span><span class="n">ctx</span><span class="p">,</span>
+                                                          <span class="k">struct</span> <span class="n">task_struct</span> <span class="o">*</span><span class="n">task</span><span class="p">,</span>
+                                                          <span class="k">struct</span> <span class="n">files_struct</span> <span class="o">*</span><span class="n">files</span><span class="p">)</span>
+                                        <span class="p">{</span>
+                                            <span class="k">struct</span> <span class="n">io_defer_entry</span> <span class="o">*</span><span class="n">de</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+                                            <span class="n">LIST_HEAD</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+                                            <span class="n">spin_lock_irq</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">completion_lock</span><span class="p">);</span>
+                                            <span class="n">list_for_each_entry_reverse</span><span class="p">(</span><span class="n">de</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">defer_list</span><span class="p">,</span> <span class="n">list</span><span class="p">)</span> <span class="p">{</span>
+                                                <span class="k">if</span> <span class="p">(</span><span class="n">io_match_task</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">files</span><span class="p">))</span> <span class="p">{</span>
+                                                    <span class="n">list_cut_position</span><span class="p">(</span><span class="o">&amp;</span><span class="n">list</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">defer_list</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">);</span>
+                                                    <span class="k">break</span><span class="p">;</span>
+                                                <span class="p">}</span>
+                                            <span class="p">}</span>
+                                            <span class="n">spin_unlock_irq</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">completion_lock</span><span class="p">);</span>
+                                            <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">list_empty</span><span class="p">(</span><span class="o">&amp;</span><span class="n">list</span><span class="p">))</span> <span class="p">{</span>
+                                                <span class="n">de</span> <span class="o">=</span> <span class="n">list_first_entry</span><span class="p">(</span><span class="o">&amp;</span><span class="n">list</span><span class="p">,</span> <span class="k">struct</span> <span class="n">io_defer_entry</span><span class="p">,</span> <span class="n">list</span><span class="p">);</span>
+                                                <span class="n">list_del_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">);</span>
+
+        <span class="n">list_del_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">);</span>
+        <span class="n">io_req_task_queue</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">);</span>
+        <span class="n">kfree</span><span class="p">(</span><span class="n">de</span><span class="p">);</span>  <span class="c1">//&lt;-----  the first kfree()</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">list_empty</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">defer_list</span><span class="p">));</span>
+<span class="p">}</span>
+
+                                                <span class="n">req_set_fail_links</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">);</span>
+                                                <span class="n">io_put_req</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">);</span>
+                                                <span class="n">io_req_complete</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">,</span> <span class="o">-</span><span class="n">ECANCELED</span><span class="p">);</span>
+                                                <span class="n">kfree</span><span class="p">(</span><span class="n">de</span><span class="p">);</span>  <span class="c1">//&lt;----- the second kfree()</span>
+                                            <span class="p">}</span>
+                                        <span class="p">}</span>
+</pre></div>
+Yes, double free happens here! maybe we can make use of this double free to do stuff!</p>
+<h3 id="33-nice-try-for-the-issue">3.3 Nice try for the issue<a class="headerlink" href="#33-nice-try-for-the-issue" title="Permanent link"></a></h3>
+<p>After knowing this is a double free, we started to dive into it.
+The <code>io_defer_entry</code> object is allocated from  kmalloc-128 kmem-cache in kernel 5.10 on Android. This kernel double free will be triggered step by step:<br />
+step0. before the first kfree():
+<center>
+<img alt="figure3" src="./assets2/pic2_before_kfree.svg" title="figure3" />
+</center>
+<center>Figure 3</center></p>
+<p>step1. after the first kfree():
+<center>
+<img alt="figure4" src="./assets2/pic3_first_kfree.svg" title="figure4" />
+</center>
+<center>Figure 4</center></p>
+<p>step2. after the second kfree():
+<center>
+<img alt="figure5" src="./assets2/pic4_second_kfree.svg" title="figure5" />
+</center>
+<center>Figure 5</center></p>
+<p>As you can see that the slab gets into an illegal state: both freelist and the &ldquo;next object&rdquo; points to the same free object. This is a really interesting state because we can allocate objects from this slab two times but only get the same object! Ideally, we can make use of this situation to control the freelist of the slab:
+The first step, we can manage to allocate a content controllable object from the slab. After this, the slab will become like this:
+<center>
+<img alt="figure6" src="./assets2/pic5_after_allocate.svg" title="figure6" />
+</center>
+<center>Figure 6</center></p>
+<p>As you can see, because the object is content controllable, we can make the &ldquo;next object&rdquo; point to any virtual address where we can totally control!
+The second step, we continue to allocate an object from the slab. After this, the slab will become like this:
+<center>
+<img alt="figure7" src="./assets2/pic6_after_second_allocate.svg" title="figure7" />
+</center>
+<center>Figure 7</center></p>
+<p>Yes, we just make the freelist point to the virtual address which we can totally control. From here we can easily get root.
+However, the Android kernel enables CONFIG_SLAB_FREELIST_HARDENED, which gets the &ldquo;next object&rdquo; pointer obfuscated and makes it impossible for us to finish the first step. As a result, kernel panic would happen because freelist is out of control and we will allocate an object from an illegal virtual address.
+Nice try, but it didn&rsquo;t work out.</p>
+<h3 id="34-is-the-issue-exploitable">3.4 Is the issue exploitable?<a class="headerlink" href="#34-is-the-issue-exploitable" title="Permanent link"></a></h3>
+<h4 id="341-the-two-challenges-we-are-facing">3.4.1 The two challenges we are facing<a class="headerlink" href="#341-the-two-challenges-we-are-facing" title="Permanent link"></a></h4>
+<p>Ever since we can&rsquo;t exploit the issue after both kfree() are finished, we start to try to turn this issue into a UAF. The strategy is really simple:
+<div class="highlight"><pre>iopoll  Task                                        exec Task
+(cpu A)                                             (cpu B)
+
+A1.kfree(de);
+
+A2.perform heap spray: allocate victim objects to occupy the released de;
+
+                                                    B1.kfree(de); // This will release the victim object
+
+                                                    B2. use the victim object will trigger UAF
+</pre></div>
+The strategy is easy to understand, but there are two challenges we are facing:</p>
+<h4 id="challenge-1-a-tiny-time-window-between-two-kfree">Challenge 1: A tiny time window between two kfree()<a class="headerlink" href="#challenge-1-a-tiny-time-window-between-two-kfree" title="Permanent link"></a></h4>
+<p>The tiny time window will greatly affect the success rate of heap spray. It&rsquo;s impossible for us to occupy the released <code>io_defer_entry</code> object before the second kfree() without additional operations.</p>
+<h4 id="challenge-2-triggering-the-double-free-by-repeating-makes-the-issue-less-exploitable">Challenge 2: Triggering the double free by repeating makes the issue less exploitable<a class="headerlink" href="#challenge-2-triggering-the-double-free-by-repeating-makes-the-issue-less-exploitable" title="Permanent link"></a></h4>
+<p>As mentioned, we have to trigger io_cancel_defer_files() and __io_queue_deferred() repeatedly to make double free happen. The double free surely happens in a few seconds if we perform the repeating. However, this trigger strategy heavily depends on the repeating rate. The faster the repeating is, the faster the bug will be triggered. During the test, we try to widen the time window between two kfree() by adding some debug code to solve challenge 1:
+<div class="highlight"><pre>iopoll  Task                                        exec Task
+(cpu A)                                             (cpu B)
+
+A1.kfree(de);
+
+A2.perform heap spray: allocate victim objects to occupy the released de;
+
+                                                    B1.mdelay(200) // widen the time window !!!
+
+                                                    B2.kfree(de); // This will release the victim object
+
+                                                    B3. use the victim object will trigger UAF
+</pre></div></p>
+<p>It&rsquo;s obvious that the time window is big enough for the heap spray and the first challenge seems solved. But in practice, we found that the issue cannot be triggered anymore with such a big time window. The reason for this result is that although the huge time window allows enough time for the heap spray, it also makes the repeating very slow, so it becomes very difficult to trigger the issue.</p>
+<p>For now, we seem to be in a very awkward situation: on the one hand, we want the time window to be larger to solve challenge 1, and on the other hand, we want the repeating to be faster to solve challenge 2. We can never solve the two challenges at the same time if we don&rsquo;t come up with a new method to trigger the issue more efficiently. At this stage, we are starting to be a little unsure if this vulnerability is actually exploitable. But it is still too early to draw conclusions because we still have a lot of code details that have not been covered.</p>
+<h4 id="342-the-double-free-is-exploitable">3.4.2 The double free is exploitable!<a class="headerlink" href="#342-the-double-free-is-exploitable" title="Permanent link"></a></h4>
+<p>After reading the code for a long time, we found some neglected key information to solve these two challenges very well.</p>
+<h4 id="solve-challenge-2">Solve challenge 2:<a class="headerlink" href="#solve-challenge-2" title="Permanent link"></a></h4>
+<p>First of all, we found that <code>ctx-&gt;defer_list</code> can be a really long list because io_uring doesn&rsquo;t limit the number of <code>io_defer_entry</code> objects in the <code>ctx-&gt;defer_list</code>. Secondly, generating an <code>io_defer_entry</code> object is much easier than we thought before. According to the document of io_uring, we can not only generate an <code>io_defer_entry</code> object associated with a request of which REQ_F_IO_DRAIN is enabled, but also generate an <code>io_defer_entry</code> object associated with a request of which REQ_F_IO_DRAIN is not enabled.
+<div class="highlight"><pre>       IOSQE_IO_DRAIN
+              When this flag is  specified,  the  SQE  will  not  be  started  before  previously
+              submitted  SQEs  have  completed,  and new SQEs will not be started before this one
+              completes. Available since 5.2.
+</pre></div>
+Here is the pseudocode used to generate a million <code>io_defer_entry</code> objects, each of them is associated with a request of which REQ_F_IO_DRAIN is not enabled:
+<div class="highlight"><pre>iopoll  Task
+(cpu A)
+
+A1. create a `io_ring_ctx` with IORING_SETUP_IOPOLL enabled by io_uring_setup();
+
+A2: commit an IORING_OP_READ request to read a file of ext4 filesystem ;
+
+A3. commit a request with REQ_F_IO_DRAIN enabled; // This will trigger the generating of a
+                                                  // `io_defer_entry` object because the CQE of the
+                                                  // previous request is not acquired yet
+
+A4. for (i = 0; i &lt; 1000000; i++) {
+        commit a request with REQ_F_IO_DRAIN disabled;  // This will trigger the generating of a
+    }                                                   // `io_defer_entry` object associated with
+                                                        // a request of which REQ_F_IO_DRAIN
+                                                        // is not enabled !
+</pre></div>
+Ever since we have the ability to generate so many <code>io_defer_entry</code> objects associated with requests of which REQ_F_IO_DRAIN is not enabled, we can let the __io_queue_deferred() execute for a very long time when it&rsquo;s traversing the <code>ctx-&gt;defer_list</code>:
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">__io_queue_deferred</span><span class="p">(</span><span class="k">struct</span> <span class="n">io_ring_ctx</span> <span class="o">*</span><span class="n">ctx</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">io_defer_entry</span> <span class="o">*</span><span class="n">de</span> <span class="o">=</span> <span class="n">list_first_entry</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">defer_list</span><span class="p">,</span>
+                        <span class="k">struct</span> <span class="n">io_defer_entry</span><span class="p">,</span> <span class="n">list</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">req_need_defer</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">,</span> <span class="n">de</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">))</span> <span class="c1">// return false because the REQ_F_IO_DRAIN is not enabled</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="n">list_del_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">);</span>
+        <span class="n">io_req_task_queue</span><span class="p">(</span><span class="n">de</span><span class="o">-&gt;</span><span class="n">req</span><span class="p">);</span>
+        <span class="n">kfree</span><span class="p">(</span><span class="n">de</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">list_empty</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">defer_list</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+In practice, we can let __io_queue_deferred() execute for a few seconds by increasing the number of objects. A few seconds is a really large time window! For now, we can be really positive about when the __io_queue_deferred() is executing. So we just need to trigger the io_cancel_defer_files() during the execution of __io_queue_deferred(), and the double free will be triggered with high probability. No more repeating strategy!</p>
+<h4 id="solve-challenge-1">Solve challenge 1:<a class="headerlink" href="#solve-challenge-1" title="Permanent link"></a></h4>
+<p>Since we don&rsquo;t have to trigger the double free with the repeating strategy, we can try to widen the time window between the kfree() as long as we want. First of all, we have tried to use a few known methods to widen the time window, such as the method given by Jann Horn[1], the method given by Yoochan Lee, Byoungyoung Lee, Chanwoo Min[2]. But all the methods didn&rsquo;t work out directly. It seems that the second kfree() has already been accomplished in the exec task before we try to perform the known methods by calling syscalls. Although the known methods didn&rsquo;t work out directly, they remind me that maybe there is some code in io_cancel_defer_files() that can help us expand the time window naturally ?</p>
+<p>So I started to dive into the io_cancel_defer_files(), it turns out there are so many wakeup operations before the second kfree() in io_cancel_defer_files(). Before calling the kfree(), the io_cancel_defer_files() would call io_req_complete(), which would trigger the io_cqring_ev_posted():
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">io_cqring_ev_posted</span><span class="p">(</span><span class="k">struct</span> <span class="n">io_ring_ctx</span> <span class="o">*</span><span class="n">ctx</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">wq_has_sleeper</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">cq_wait</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">wake_up_interruptible</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">cq_wait</span><span class="p">);</span>  <span class="c1">//&lt;------------------------ wakeup the waiter (1)</span>
+        <span class="n">kill_fasync</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">cq_fasync</span><span class="p">,</span> <span class="n">SIGIO</span><span class="p">,</span> <span class="n">POLL_IN</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">waitqueue_active</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">wait</span><span class="p">))</span>
+        <span class="n">wake_up</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">wait</span><span class="p">);</span>                   <span class="c1">//&lt;------------------------ wakeup the waiter (2)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sq_data</span> <span class="o">&amp;&amp;</span> <span class="n">waitqueue_active</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sq_data</span><span class="o">-&gt;</span><span class="n">wait</span><span class="p">))</span>
+        <span class="n">wake_up</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sq_data</span><span class="o">-&gt;</span><span class="n">wait</span><span class="p">);</span>          <span class="c1">//&lt;------------------------ wakeup the waiter (3)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">io_should_trigger_evfd</span><span class="p">(</span><span class="n">ctx</span><span class="p">))</span>
+        <span class="n">eventfd_signal</span><span class="p">(</span><span class="n">ctx</span><span class="o">-&gt;</span><span class="n">cq_ev_fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>      <span class="c1">//&lt;------------------------ wakeup the waiter (4)</span>
+<span class="p">}</span>
+</pre></div>
+There are 4 places where the exec task would wake up other tasks for running. We make use of the first one for widening the time window. We only need to set up a waiter into <code>ctx-&gt;cq_wait</code> by epoll_wait() on the io_uring fd. We need another epoll task to perform the epoll_wait(), and the epoll task can preempt the CPU when the wake_up_interruptible() gets called and put a stop to io_cancel_defer_files() before the second kfree(). However, the time window is still likely to be very small if exec task is put back into execution very quickly. To solve this problem once and for all, we reuse the scheduler strategy mentioned by Jann Horn[1] and we succeed in expanding the time window between the kfree() for seconds or even longer. For now, we have solved challenge 1 very well.
+The new method to trigger the double free and turn it to UAF is like this:</p>
+<p><center>
+<img alt="figure8" src="./assets2/pic7_final_race.svg" title="figure8" />
+</center>
+<center>Figure 8</center></p>
+<p>In practice, this new method can trigger the UAF to the victim object in a big chance. Now, we can be 100% sure that this vulnerability is exploitable!</p>
+<h3 id="35-lets-get-root">3.5 Let&rsquo;s get root<a class="headerlink" href="#35-lets-get-root" title="Permanent link"></a></h3>
+<h4 id="351-create-the-victim-signalfd_ctx-object">3.5.1 Create the victim <code>signalfd_ctx</code> object<a class="headerlink" href="#351-create-the-victim-signalfd_ctx-object" title="Permanent link"></a></h4>
+<p>We choose the <code>signalfd_ctx</code> object as the victim object for the heap spray between the kfree(). The <code>signalfd_ctx</code> object is allocated from kmalloc-128 kmem-cache through signalfd():
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">do_signalfd4</span><span class="p">(</span><span class="kt">int</span> <span class="n">ufd</span><span class="p">,</span> <span class="kt">sigset_t</span> <span class="o">*</span><span class="n">mask</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">signalfd_ctx</span> <span class="o">*</span><span class="n">ctx</span><span class="p">;</span>
+    <span class="p">......</span>
+    <span class="n">sigdelsetmask</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">sigmask</span><span class="p">(</span><span class="n">SIGKILL</span><span class="p">)</span> <span class="o">|</span> <span class="n">sigmask</span><span class="p">(</span><span class="n">SIGSTOP</span><span class="p">));</span><span class="c1">// bit18 and bit8 of mask will be set to 1</span>
+    <span class="n">signotset</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">ufd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ctx</span> <span class="o">=</span> <span class="n">kmalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">ctx</span><span class="p">),</span> <span class="n">GFP_KERNEL</span><span class="p">);</span>      <span class="c1">//&lt;-----------  allocation of signalfd_ctx</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">ctx</span><span class="p">)</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
+
+        <span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sigmask</span> <span class="o">=</span> <span class="o">*</span><span class="n">mask</span><span class="p">;</span>
+
+        <span class="cm">/*</span>
+<span class="cm">         * When we call this, the initialization must be complete, since</span>
+<span class="cm">         * anon_inode_getfd() will install the fd.</span>
+<span class="cm">         */</span>
+        <span class="n">ufd</span> <span class="o">=</span> <span class="n">anon_inode_getfd</span><span class="p">(</span><span class="s">&quot;[signalfd]&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">signalfd_fops</span><span class="p">,</span> <span class="n">ctx</span><span class="p">,</span>
+                       <span class="n">O_RDWR</span> <span class="o">|</span> <span class="p">(</span><span class="n">flags</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">O_CLOEXEC</span> <span class="o">|</span> <span class="n">O_NONBLOCK</span><span class="p">)));</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">ufd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">kfree</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">fd</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fdget</span><span class="p">(</span><span class="n">ufd</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">file</span><span class="p">)</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">EBADF</span><span class="p">;</span>
+        <span class="n">ctx</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">private_data</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">f_op</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">signalfd_fops</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">fdput</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">spin_lock_irq</span><span class="p">(</span><span class="o">&amp;</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">sighand</span><span class="o">-&gt;</span><span class="n">siglock</span><span class="p">);</span>
+        <span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sigmask</span> <span class="o">=</span> <span class="o">*</span><span class="n">mask</span><span class="p">;</span>                       <span class="c1">// &lt;----  limited write operation to signalfd_ctx </span>
+        <span class="n">spin_unlock_irq</span><span class="p">(</span><span class="o">&amp;</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">sighand</span><span class="o">-&gt;</span><span class="n">siglock</span><span class="p">);</span>
+
+        <span class="n">wake_up</span><span class="p">(</span><span class="o">&amp;</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">sighand</span><span class="o">-&gt;</span><span class="n">signalfd_wqh</span><span class="p">);</span>
+        <span class="n">fdput</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">ufd</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+As you can see, we can use the <code>signalfd_ctx</code> as the victim object and write into the first 8 bytes of the <code>signalfd_ctx</code> after the heap spray. Although the writing operation is limited, the limitation won&rsquo;t bother us that much. Except for the writing operation, we can also read the first 8 bytes of the <code>signalfd_ctx</code>  through the <code>show_fdinfo</code> interface exported by procfs:
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">void</span> <span class="nf">signalfd_show_fdinfo</span><span class="p">(</span><span class="k">struct</span> <span class="n">seq_file</span> <span class="o">*</span><span class="n">m</span><span class="p">,</span> <span class="k">struct</span> <span class="n">file</span> <span class="o">*</span><span class="n">f</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">signalfd_ctx</span> <span class="o">*</span><span class="n">ctx</span> <span class="o">=</span> <span class="n">f</span><span class="o">-&gt;</span><span class="n">private_data</span><span class="p">;</span>
+    <span class="kt">sigset_t</span> <span class="n">sigmask</span><span class="p">;</span>
+
+    <span class="n">sigmask</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sigmask</span><span class="p">;</span>
+    <span class="n">signotset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sigmask</span><span class="p">);</span>
+    <span class="kt">render_sigset_t</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&quot;sigmask:</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sigmask</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+Between the two kfree(), we can allocate 16000 <code>signalfd_ctx</code> objects to occupy the released <code>io_defer_entry</code> object. And if we succeed in occupying the released <code>io_defer_entry</code> object, we will get a released <code>signalfd_ctx</code> object after the second kfree(). We call this released <code>signalfd_ctx</code> object as victim <code>signalfd_ctx</code> object.</p>
+<h4 id="352-locate-the-victim-signalfd_ctx-object">3.5.2 Locate the victim <code>signalfd_ctx</code> object<a class="headerlink" href="#352-locate-the-victim-signalfd_ctx-object" title="Permanent link"></a></h4>
+<p>Although we have a victim <code>signalfd_ctx</code> object, we don&rsquo;t know which fd is associated with it. So we have to perform spray again to catch the released victim <code>signalfd_ctx</code> object. And this time, we use the <code>seq_operations</code> object to perform the heap spray. The <code>seq_operations</code> object is allocated from kmalloc-128 kmem-cache, and the allocation can be triggered by single_open(). We can trigger single_open() by opening <code>/proc/self/status</code> or other procfs files.
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">single_open</span><span class="p">(</span><span class="k">struct</span> <span class="n">file</span> <span class="o">*</span><span class="n">file</span><span class="p">,</span> <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">show</span><span class="p">)(</span><span class="k">struct</span> <span class="n">seq_file</span> <span class="o">*</span><span class="p">,</span> <span class="kt">void</span> <span class="o">*</span><span class="p">),</span>
+        <span class="kt">void</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">seq_operations</span> <span class="o">*</span><span class="n">op</span> <span class="o">=</span> <span class="n">kmalloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">op</span><span class="p">),</span> <span class="n">GFP_KERNEL_ACCOUNT</span><span class="p">);</span><span class="c1">//allocate seq_operations object</span>
+    <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">op</span><span class="o">-&gt;</span><span class="n">start</span> <span class="o">=</span> <span class="n">single_start</span><span class="p">;</span>
+        <span class="n">op</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">single_next</span><span class="p">;</span>
+        <span class="n">op</span><span class="o">-&gt;</span><span class="n">stop</span> <span class="o">=</span> <span class="n">single_stop</span><span class="p">;</span>
+        <span class="n">op</span><span class="o">-&gt;</span><span class="n">show</span> <span class="o">=</span> <span class="n">show</span><span class="p">;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">seq_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">op</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">res</span><span class="p">)</span>
+            <span class="p">((</span><span class="k">struct</span> <span class="n">seq_file</span> <span class="o">*</span><span class="p">)</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">private_data</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">private</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">kfree</span><span class="p">(</span><span class="n">op</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+We can allocate 16000 <code>seq_operations</code> objects to catch the released <code>signalfd_ctx</code> object. Once the released <code>signalfd_ctx</code> object gets occupied by a <code>seq_operations</code> object, it would be like this:</p>
+<p><center>
+<img alt="figure9" src="./assets2/pic8_locate_signalfd_ctx.svg" title="figure9" />
+</center>
+<center>Figure 9</center></p>
+<p>Because the first 8 bytes of the <code>seq_operations</code> object is a kernel virtual address, we can locate the victim signal fd by reading the fdinfo of all the signal fd. If the fdinfo of a signal fd is not the same as initialized, it must be the victim signal fd. Since the victim signal fd is associated with the victim <code>signalfd_ctx</code> object, we successfully locate the victim <code>signalfd_ctx</code> object!</p>
+<h4 id="353-reclaim-the-slab-in-which-the-victim-signalfd_ctx-object-lies">3.5.3 Reclaim the slab in which the victim <code>signalfd_ctx</code> object lies<a class="headerlink" href="#353-reclaim-the-slab-in-which-the-victim-signalfd_ctx-object-lies" title="Permanent link"></a></h4>
+<p>For now, if we close all the signal fd and <code>/proc/self/status</code> fd except the victim signal fd, we will make the slab where the victim <code>signalfd_ctx</code> object lies become empty. We call this empty slab the victim slab. With the help of the well-known cross-cache attack technique, it would be simple for us to let the page allocator reclaim the victim slab. Many researchers have talked about how to let an empty slab be reclaimed by the page allocator quickly and stably, so there is no more discussion here.</p>
+<h4 id="354-occupy-the-victim-slab-with-user-page-tables-and-locate-the-victim-signalfd_ctx-object">3.5.4 Occupy the victim slab with user page tables and locate the victim <code>signalfd_ctx</code> object<a class="headerlink" href="#354-occupy-the-victim-slab-with-user-page-tables-and-locate-the-victim-signalfd_ctx-object" title="Permanent link"></a></h4>
+<p>Once the victim slab is reclaimed to the page allocator, we can perform heap spray with user page tables to try to catch the victim slab. The size of the slab of kmalloc-128 kmem-cache is 1 page which is the same as the user page table, and both the victim slab and page table are allocated from the same zone of the page allocator, so there is a high probability that the user page table can occupy the victim slab. If the occupation succeeds, it will be like this:
+<center>
+<img alt="figure10" height="80%" src="./assets2/pic9_pagetable_occupy.svg" title="figure10" width="80%" />
+</center>
+<center>Figure 10</center></p>
+<p>As you can see, by writing the first 8 bytes of the victim <code>signalfd_ctx</code> object, we can control one PTE of the user page table! Since we can control a PTE, we can modify kernel text or data as we want by setting the physical address of the PTE to the physical address of kernel text or data.</p>
+<p>Well, many details still need to be taken good care of. Let&rsquo;s have a look at how to perform heap spray with user page tables step by step:</p>
+<h5 id="step-1-create-a-large-memory-region-in-the-virtual-address-space-by-mmap">Step 1. create a large memory region in the virtual address space by mmap()<a class="headerlink" href="#step-1-create-a-large-memory-region-in-the-virtual-address-space-by-mmap" title="Permanent link"></a></h5>
+<p>Because every last-level page table describes 2MiB of virtual memory, if we want to spray 512 user page tables, we must create a 512*2Mib-sized memory region with mmap(). The size of the memory region can be calculated with this formula:
+<div class="highlight"><pre>size_of_memory_region = number_of_pagetable * 2MiB
+</pre></div>
+Except for the size of the memory region, the start virtual address also needs to be taken good care of. The start virtual address we choose should be aligned with 2MiB(0x200000). The reason for this is that now we can only control the first 8 bytes of the victim <code>signalfd_ctx</code> object, and we also don&rsquo;t know the exact location of the victim <code>signalfd_ctx</code> object in the victim slab, so it could be at any offset aligned by 128 in the slab. The 0x200000-aligned start virtual address would ensure that the PTE corresponding to the start virtual address is located at the first 8 bytes of the page table. With this guarantee, we will make sure the page table will be like this after Step 3:</p>
+<p><center>
+<img alt="figure11" src="./assets2/pic10_start_virtual_address.svg" title="figure11" />
+</center>
+<center>Figure 11</center></p>
+<h5 id="step-2-trigger-the-allocation-of-page-tables">Step 2. Trigger the allocation of page tables<a class="headerlink" href="#step-2-trigger-the-allocation-of-page-tables" title="Permanent link"></a></h5>
+<p>We have already created the memory region. To trigger the allocation of page tables, We need to perform a write operation every 0x200000 bytes from the start virtual address to ensure that all the user page tables in the memory region are allocated. Here is the pseudocode:
+<div class="highlight"><pre><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">start_virtual_address</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size_of_memory_region</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span> <span class="mh">0x200000</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">*</span><span class="p">(</span><span class="n">addr</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mh">0xaa</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+After this operation, the heap spray with user page tables has finished.</p>
+<h5 id="step-3-locate-the-victim-signalfd_ctx-object-in-page-tables">Step 3. Locate the victim <code>signalfd_ctx</code> object in page tables<a class="headerlink" href="#step-3-locate-the-victim-signalfd_ctx-object-in-page-tables" title="Permanent link"></a></h5>
+<p>After Step 2, we only ensure that every page table&rsquo;s first PTE is valid. Because the victim <code>signalfd_ctx</code> object can be located at any offset aligned with 128 in the page table, we have to validate all the PTEs located at the offset aligned with 128 in the page table. To finish that, we must perform a write operation every 16K bytes from the start virtual address. After this operation, we will see the page table shown in Figure 11.
+By reading the fdinfo of the victim signal fd, we can leak the first 8 bytes of the victim <code>signalfd_ctx</code> object. If we have succeeded in occupying the victim slab with a user page table, we will see a valid PTE value by reading the fdinfo of the victim signal fd. Otherwise, we failed. If that happens, we can unmap() the memory region and repeat Step 1 ~ Step 3 with a bigger memory region until it succeeds.</p>
+<h4 id="355-patch-the-kernel-to-finish-the-root">3.5.5 Patch the kernel to finish the root!<a class="headerlink" href="#355-patch-the-kernel-to-finish-the-root" title="Permanent link"></a></h4>
+<p>Since we located the victim <code>signalfd_ctx</code> object in page tables, we can totally control a PTE. By setting the physical address of the PTE to the physical address of kernel text and data, we can patch the kernel and get the root directly. Let&rsquo;s accomplish this goal step by step:</p>
+<h5 id="step1-locate-the-user-virtual-address-corresponding-to-the-pte">Step1. Locate the user virtual address corresponding to the PTE<a class="headerlink" href="#step1-locate-the-user-virtual-address-corresponding-to-the-pte" title="Permanent link"></a></h5>
+<p>Although we already control a PTE of the user page table, we don't know which user virtual address corresponds to this PTE. We can only patch the kernel code/data if we know the virtual address. The  idea is like this:
+<center>
+<img alt="figure12" src="./assets2/pic11_find_virtual_address.svg" title="figure12" />
+</center>
+<center>Figure 12</center></p>
+<p>To locate the user virtual address corresponding to the PTE, we need to modify the physical address of the PTE to a kernel physical address. And then traverse all the virtual addresses we have mapped to see if there is a virtual address of which the value is not the original value(0xaa) set before. If we find such a virtual address, then this virtual address is the one corresponding to the PTE.</p>
+<h5 id="step2-bypass-the-limitation-of-writing-operation">Step2. Bypass the limitation of writing operation<a class="headerlink" href="#step2-bypass-the-limitation-of-writing-operation" title="Permanent link"></a></h5>
+<p>Because the writing operation to the victim <code>signalfd_ctx</code> object is limited(the bit18 and bit8 of the written content will always be set to 1), we cannot patch all the kernel address space unless we bypass it first. A normal PTE corresponding to a read+write user virtual address is like 0xe800098952ff43, and we can see that the bit8 of PTE is always set to 1, so we don't need to worry about bit8. But the bit18 is located in the physical address of the PTE, which means that if we don't bypass the limitation, we can only patch the kernel where the bit18 of the physical address is 1.<br />
+The limitation is caused by the <code>sigdelsetmask(mask, sigmask(SIGKILL) | sigmask(SIGSTOP));</code> sentence in the do_signalfd4(). We wonder if we can patch the sentence to remove the limitation.
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">do_signalfd4</span><span class="p">(</span><span class="kt">int</span> <span class="n">ufd</span><span class="p">,</span> <span class="kt">sigset_t</span> <span class="o">*</span><span class="n">mask</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">signalfd_ctx</span> <span class="o">*</span><span class="n">ctx</span><span class="p">;</span>
+    <span class="p">......</span>
+    <span class="n">sigdelsetmask</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">sigmask</span><span class="p">(</span><span class="n">SIGKILL</span><span class="p">)</span> <span class="o">|</span> <span class="n">sigmask</span><span class="p">(</span><span class="n">SIGSTOP</span><span class="p">));</span> <span class="c1">//bit18 and bit8 of mask will be set to 1</span>
+    <span class="n">signotset</span><span class="p">(</span><span class="n">mask</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">ufd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">......</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">struct</span> <span class="n">fd</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fdget</span><span class="p">(</span><span class="n">ufd</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">.</span><span class="n">file</span><span class="p">)</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">EBADF</span><span class="p">;</span>
+        <span class="n">ctx</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">private_data</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">f_op</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">signalfd_fops</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">fdput</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">EINVAL</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">spin_lock_irq</span><span class="p">(</span><span class="o">&amp;</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">sighand</span><span class="o">-&gt;</span><span class="n">siglock</span><span class="p">);</span>
+        <span class="n">ctx</span><span class="o">-&gt;</span><span class="n">sigmask</span> <span class="o">=</span> <span class="o">*</span><span class="n">mask</span><span class="p">;</span>                       <span class="c1">// &lt;----- limited write operation to signalfd_ctx </span>
+        <span class="n">spin_unlock_irq</span><span class="p">(</span><span class="o">&amp;</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">sighand</span><span class="o">-&gt;</span><span class="n">siglock</span><span class="p">);</span>
+
+        <span class="n">wake_up</span><span class="p">(</span><span class="o">&amp;</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">sighand</span><span class="o">-&gt;</span><span class="n">signalfd_wqh</span><span class="p">);</span>
+        <span class="n">fdput</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">ufd</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+And lucky for us, the bit18 of the physical address of the do_signalfd4() happens to be 1, so we can patch the <code>sigdelsetmask(mask, sigmask(SIGKILL) | sigmask(SIGSTOP));</code> sentence to remove the writing limitation.</p>
+<h5 id="step3-patch-the-kernel">Step3. Patch the kernel<a class="headerlink" href="#step3-patch-the-kernel" title="Permanent link"></a></h5>
+<p>We need to patch <code>selinux_state</code> and a few functions(setresuid(), setresgid()&hellip;) to get the full privilege of the Google Pixel 7. Because only one PTE gets controlled, we have to modify the physical address of the PTE multiple times to patch all the data and functions we need to patch.</p>
+<h5 id="step4-call-the-setresuid-setresgid-to-get-root">Step4. Call the setresuid(), setresgid() to get root<a class="headerlink" href="#step4-call-the-setresuid-setresgid-to-get-root" title="Permanent link"></a></h5>
+<p>Since setresuid() and setresgid() have been patched by us, we can get root by calling the following code directly:
+<div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="n">setresuid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">&quot;setresuid&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">setresgid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;setresgid&quot;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;[+] Spawn a root shell</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">system</span><span class="p">(</span><span class="s">&quot;/system/bin/sh&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+Finally， we succeeded in fulfilling privilege escalation on Google pixel 7:</p>
+<p><center>
+<img alt="figure13" height="60%" src="./assets2/pixel7_root.png" title="figure13" width="60%" />
+</center>
+<center>Figure 13</center></p>
+<h3 id="36-reflections">3.6 Reflections<a class="headerlink" href="#36-reflections" title="Permanent link"></a></h3>
+<p>We found that Dirty Pagetable is a very powerful exploitation method for double free vulnerabilities especially. We only present a typical privilege escalation with CVE-2023-21400 here. There are quite a few well-known double free vulnerabilities in recent years, such as CVE-2021-22600[3] and CVE-2022-22265[4]. Could these vulnerabilities be exploited with Dirty Pagetable more conveniently? We leave the question to readers. Have fun!</p>
+<h2 id="4-exploit-file-uaf-with-dirty-pagetable">4. Exploit file UAF with Dirty Pagetable<a class="headerlink" href="#4-exploit-file-uaf-with-dirty-pagetable" title="Permanent link"></a></h2>
+<h3 id="41-file-uaf-one-of-the-most-popular-vulnerabilities-in-recent-years">4.1. File UAF: One of the most popular vulnerabilities in recent years<a class="headerlink" href="#41-file-uaf-one-of-the-most-popular-vulnerabilities-in-recent-years" title="Permanent link"></a></h3>
+<p>A file object is a fundamental object in the kernel. And the file UAF is such a popular vulnerability that I have seen so many file UAF vulnerabilities found by different researchers last year. Surprisingly, there are more different exploits for such vulnerability, and some of them are even used in the wild. As far as I know, there are at least three different exploit methods for the file UAF:</p>
+<p>The first exploit method is to get the released victim file object reused by other newly opened privileged files in the system, such as /etc/crontab. After that, we can write the privileged files and possibly get the root. This method has been mentioned and used by Jann Horn[1], Mathias Krause[5], Zhenpeng Lin[6], and me[7] when exploiting different vulnerabilities. However, there are some disadvantages to this method. First, to use the method successfully in the newer kernel, we have to win a race, which requires some time window expanding skills and some luck. Second, the most privileged files can&rsquo;t be written on Android because these files are located in the read-only file system. What&rsquo;s worse, this method cannot actively escape from the container, making file UAF less valuable.</p>
+<p>The second exploit method is to attack the page caches of system libraries or executables. The method is used by Xingyu Jin, Christian Resell, Clement Lecigne, Richard Neal[8], and Mathias Krause[9] when exploiting different file UAF vulnerabilities. We can inject malicious code into system libraries like libc.so with the method. When the privileged process executes the code of libc.so, the malicious code will be executed as a privileged user. The result of the method is just like what Dirtypipe did. It&rsquo;s a huge advantage that the method doesn&rsquo;t involve the race condition so that it can be used stably. However, this method requires much more work to get a complete privilege escalation on Android or actively escape from the container. And the method can&rsquo;t be used for other kinds of UAF vulnerabilities.</p>
+<p>The third exploit method is considered from the perspective of a cross-cache attack. Both Yong Wang[10] and Maddie Stone[11] exploit the file UAF in the way of a cross-cache attack. Before getting root, they all need to bypass the KASLR. Yong Wang[10] bypassed the KASLR by reusing the code of syscalls to guess the kslides, and Maddie Stone[11] bypassed the KASLR with another info leak issue. After bypassing the KASLR, they constructed a fake file object to finish the kernel read and kernel write primitive. We can see that the method require us to bypass KASLR in some way: by reusing kernel code or other info leak vulnerabilities.</p>
+<p>It&rsquo;s really cool that so many different exploitation methods and exploits finished by so many researchers just for the file UAF. I am so inspired by all the researchers that they just did excellent jobs and showed us how flexible and fun exploitation can be.</p>
+<p>Let&rsquo;s look at how we can fulfill privilege escalation with Dirty Pagetable.</p>
+<h3 id="42-exploit-the-file-uaf-with-dirty-pagetable">4.2. Exploit the file UAF with Dirty Pagetable<a class="headerlink" href="#42-exploit-the-file-uaf-with-dirty-pagetable" title="Permanent link"></a></h3>
+<p>We choose a well-known file UAF vulnerability——CVE-2022-28350 to demonstrate how Dirty Pagetable works in detail. We choose an affected Android device shipped with kernel 5.10 for the exploitation.</p>
+<h4 id="421-cve-2022-28350-a-file-uaf-vulnerability-in-arm-mali-gpu-driver">4.2.1 CVE-2022-28350: A file UAF vulnerability in ARM Mali GPU driver<a class="headerlink" href="#421-cve-2022-28350-a-file-uaf-vulnerability-in-arm-mali-gpu-driver" title="Permanent link"></a></h4>
+<p>The vulnerability I found last year existed in the ARM Mali GPU driver, affecting many Android 12 and Android 13 devices. The root cause of CVE-2022-28350 is quite simple:
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">int</span> <span class="nf">kbase_kcpu_fence_signal_prepare</span><span class="p">(...)</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="cm">/* create a sync_file fd representing the fence */</span>
+    <span class="n">sync_file</span> <span class="o">=</span> <span class="n">sync_file_create</span><span class="p">(</span><span class="n">fence_out</span><span class="p">);</span> <span class="c1">//&lt;------ create the file object</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">sync_file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">...</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="o">-</span><span class="n">ENOMEM</span><span class="p">;</span>
+        <span class="k">goto</span> <span class="n">file_create_fail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">fd</span> <span class="o">=</span> <span class="n">get_unused_fd_flags</span><span class="p">(</span><span class="n">O_CLOEXEC</span><span class="p">);</span> <span class="c1">//&lt;------ get an unused fd</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">fd</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">fd</span><span class="p">;</span>
+        <span class="k">goto</span> <span class="n">fd_flags_fail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">fd_install</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">sync_file</span><span class="o">-&gt;</span><span class="n">file</span><span class="p">);</span> <span class="c1">//&lt;------ associate the file object with the fd</span>
+
+    <span class="n">fence</span><span class="p">.</span><span class="n">basep</span><span class="p">.</span><span class="n">fd</span> <span class="o">=</span> <span class="n">fd</span><span class="p">;</span>
+    <span class="p">...</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">copy_to_user</span><span class="p">(</span><span class="n">u64_to_user_ptr</span><span class="p">(</span><span class="n">fence_info</span><span class="o">-&gt;</span><span class="n">fence</span><span class="p">),</span> <span class="o">&amp;</span><span class="n">fence</span><span class="p">,</span>
+            <span class="k">sizeof</span><span class="p">(</span><span class="n">fence</span><span class="p">)))</span> <span class="p">{</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="o">-</span><span class="n">EFAULT</span><span class="p">;</span>
+        <span class="k">goto</span> <span class="n">fd_flags_fail</span><span class="p">;</span> <span class="c1">//&lt;------ enter this routine !</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="nl">fd_flags_fail</span><span class="p">:</span>
+    <span class="n">fput</span><span class="p">(</span><span class="n">sync_file</span><span class="o">-&gt;</span><span class="n">file</span><span class="p">);</span> <span class="c1">//&lt;------ release the file object</span>
+<span class="nl">file_create_fail</span><span class="p">:</span>
+    <span class="n">dma_fence_put</span><span class="p">(</span><span class="n">fence_out</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+As you can see, fd_install() gets called to associate the file object with the fd. The fd will be passed to user space with copy_to_user(). However, when copy_to_user() fails, the file object will be released, resulting in a valid fd associated with an already released file object:
+<center>
+<img alt="figure14" src="./assets3/pic1_dangling_file.svg" title="figure14" />
+</center>
+<center>Figure 14</center></p>
+<p>We can see that the victim fd is associated with a released file object at the slab of the filp kmem cache. It&rsquo;s easy to get this scene with CVE-2022-28350; more details can be found here[7]. The released file object is the victim file object used later. And the slab in which the victim file object lies is the victim slab.</p>
+<h4 id="422-reclaim-the-victim-slab-into-the-page-allocator">4.2.2 Reclaim the victim slab into the page allocator<a class="headerlink" href="#422-reclaim-the-victim-slab-into-the-page-allocator" title="Permanent link"></a></h4>
+<p>This step is a regular part of the cross-cache attack. After we trigger the vulnerability and free all the other objects on the victim slab, the victim slab may be reclaimed into the page allocator. And many researchers have proposed ways to ensure this. So no more discussion here.</p>
+<h4 id="423-occupy-the-victim-slab-with-user-page-tables">4.2.3 Occupy the victim slab with user page tables<a class="headerlink" href="#423-occupy-the-victim-slab-with-user-page-tables" title="Permanent link"></a></h4>
+<p>We know that the size of the slab of filp kmem cache is two pages on Android, and the size of the user page table is one page. Although the size of the victim slab and user page table is unequal, we still get a big chance to occupy the victim slab with the user page tables by heap spray. In practice, the success rate of occupation is almost 100%. After the occupation, the layout of the victim file object and user page table is supposed to be like this:
+<center>
+<img alt="figure15" height="50%" src="./assets3/pic2_occupy_slab_with_pagetable.svg" title="figure15" width="50%" />
+</center>
+<center>Figure 15</center></p>
+<p>As you can see, the victim file object locates in the user page table.</p>
+<h4 id="424-construct-the-increment-primitive-and-locate-the-virtual-user-address-corresponding-to-the-victim-pte">4.2.4 Construct the increment primitive and locate the virtual user address corresponding to the victim PTE<a class="headerlink" href="#424-construct-the-increment-primitive-and-locate-the-virtual-user-address-corresponding-to-the-victim-pte" title="Permanent link"></a></h4>
+<p>Although we make the victim file object located in the user page table, we can perform very limited operations on the victim file object because it&rsquo;s an illegal file object. Most operations on the victim file object would trigger illegal memory access, and kernel panic would happen. After a long time of searching, I found that the <code>f_count</code> field of the file object can be incremented by one many times with dup() without triggering a kernel panic. Because the dup() consumes fd resources and a single process can only generate 32768 fd at most, we can only add 32768 to <code>f_count</code> at most in a process. This is just not enough(You will know the reason later). So I kept on looking, and it turns out that fork()+dup() would help us break the limitation. We can call fork() first, which will add 1 to the <code>f_count</code> of the victim file object, and then in the child process, we can add 32768 to <code>f_count</code>. Because we can repeat fork()+dup() many times, so we succeed in breaking the limitation. Although there is still a limitation for the increment times, it won&rsquo;t bother us that much.</p>
+<p>We now have an increment primitive for the <code>f_count</code> of the victim file object. Our next step is obvious: let the position of the victim PTE coincide with the <code>f_count</code>, then we can perform the increment primitive to the victim PTE and control it to some extent.</p>
+<p>The aligned size of a file object is 320 bytes, the offset of <code>f_count</code> is 56, and the size of <code>f_count</code> is 8 bytes:
+<div class="highlight"><pre><span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">ptype</span> <span class="o">/</span><span class="n">o</span> <span class="k">struct</span> <span class="n">file</span>
+<span class="cm">/* offset      |    size */</span>  <span class="n">type</span> <span class="o">=</span> <span class="k">struct</span> <span class="n">file</span> <span class="p">{</span>
+<span class="cm">/*      0      |      16 */</span>    <span class="k">union</span> <span class="p">{</span>
+<span class="cm">/*                     8 */</span>        <span class="k">struct</span> <span class="n">llist_node</span> <span class="p">{</span>
+<span class="cm">/*      0      |       8 */</span>            <span class="k">struct</span> <span class="n">llist_node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+
+                                       <span class="cm">/* total size (bytes):    8 */</span>
+                                   <span class="p">}</span> <span class="n">fu_llist</span><span class="p">;</span>
+<span class="cm">/*                    16 */</span>        <span class="k">struct</span> <span class="n">callback_head</span> <span class="p">{</span>
+<span class="cm">/*      0      |       8 */</span>            <span class="k">struct</span> <span class="n">callback_head</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="cm">/*      8      |       8 */</span>            <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">)(</span><span class="k">struct</span> <span class="n">callback_head</span> <span class="o">*</span><span class="p">);</span>
+
+                                       <span class="cm">/* total size (bytes):   16 */</span>
+                                   <span class="p">}</span> <span class="n">fu_rcuhead</span><span class="p">;</span>
+
+                                   <span class="cm">/* total size (bytes):   16 */</span>
+                               <span class="p">}</span> <span class="n">f_u</span><span class="p">;</span>
+<span class="cm">/*     16      |      16 */</span>    <span class="k">struct</span> <span class="n">path</span> <span class="p">{</span>
+<span class="cm">/*     16      |       8 */</span>        <span class="k">struct</span> <span class="n">vfsmount</span> <span class="o">*</span><span class="n">mnt</span><span class="p">;</span>
+<span class="cm">/*     24      |       8 */</span>        <span class="k">struct</span> <span class="n">dentry</span> <span class="o">*</span><span class="n">dentry</span><span class="p">;</span>
+
+                                   <span class="cm">/* total size (bytes):   16 */</span>
+                               <span class="p">}</span> <span class="n">f_path</span><span class="p">;</span>
+<span class="cm">/*     32      |       8 */</span>    <span class="k">struct</span> <span class="n">inode</span> <span class="o">*</span><span class="n">f_inode</span><span class="p">;</span>
+<span class="cm">/*     40      |       8 */</span>    <span class="k">const</span> <span class="k">struct</span> <span class="n">file_operations</span> <span class="o">*</span><span class="n">f_op</span><span class="p">;</span>
+<span class="cm">/*     48      |       4 */</span>    <span class="kt">spinlock_t</span> <span class="n">f_lock</span><span class="p">;</span>
+<span class="cm">/*     52      |       4 */</span>    <span class="k">enum</span> <span class="n">rw_hint</span> <span class="n">f_write_hint</span><span class="p">;</span>
+<span class="cm">/*     56      |       8 */</span>    <span class="kt">atomic_long_t</span> <span class="n">f_count</span><span class="p">;</span>
+<span class="cm">/*     64      |       4 */</span>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">f_flags</span><span class="p">;</span>
+<span class="p">......</span>
+<span class="p">......</span>
+<span class="cm">/*    288      |       8 */</span>    <span class="n">u64</span> <span class="n">android_oem_data1</span><span class="p">;</span>
+
+                               <span class="cm">/* total size (bytes):  296 */</span>
+                             <span class="p">}</span>
+</pre></div>
+The size of the slab of filp kmem cache is two pages, and there are 25 file objects in a slab of filp kmem cache; the layout of a slab is like this:
+<center>
+<img alt="figure16" height="80%" src="./assets3/pic3_slab_layout_of_filp.svg" title="figure16" width="80%" />
+</center>
+<center>Figure 16</center></p>
+<p>Because there are 25 possible positions for the victim file object, to ensure that the <code>f_count</code> of the victim file object and the victim PTE are coincident in position, we have to prepare every user page table like this:</p>
+<p><center>
+<img alt="figure17" height="40%" src="./assets3/pic4_pagetable_layout.svg" title="figure17" width="40%" />
+</center>
+<center>Figure 17</center></p>
+<p>Now we have made the <code>f_count</code> of the victim file object coincide with a valid PTE in position, and this valid PTE is the victim PTE. But how do we know the user virtual address corresponding to the victim PTE? This can be handled with the help of the increment primitive.</p>
+<p>Before we perform the increment primitive, the page table and corresponding user virtual addresses should be like this:</p>
+<p><center>
+<img alt="figure18" height="90%" src="./assets3/pic5_patable_and_va.svg" title="figure18" width="90%" />
+</center>
+<center>Figure 18</center></p>
+<p>As you can see, to better distinguish the physical page corresponding to each user virtual address, I write the virtual address into the first 8 bytes of each physical page as a mark. Because all the physical pages corresponding to the user virtual addresses are allocated at once, so physical addresses of them are highly likely to be contiguous.</p>
+<p>If we try to add 0x1000 to the victim PTE with the increment primitive, it will change the physical page corresponding to the victim PTE just like this:</p>
+<p><center>
+<img alt="figure19" height="90%" src="./assets3/pic6_change_victim_pte.svg" title="figure19" width="90%" />
+</center>
+<center>Figure 19</center></p>
+<p>As you can see that an interesting scene shows up: The victim PTE and another valid PTE would correspond to the same physical page! Now, we can traverse all the virtual pages to check the first 8 bytes of them: if the first 8 bytes of the virtual page are not the virtual address of it, then this virtual page is the one corresponding to the victim PTE. And we successfully find the user virtual address corresponding to the victim PTE!</p>
+<h4 id="425-catch-a-page-table-again">4.2.5 Catch a page table again<a class="headerlink" href="#425-catch-a-page-table-again" title="Permanent link"></a></h4>
+<p>Now we got a victim PTE and a limited increment primitive to it. Our first thought is to set the physical address associated with the victim PTE to the physical address of kernel text/data. Well, that&rsquo;s almost impossible because the physical address of the memory region allocated by mmap() is likely greater than the physical address of kernel text/data, and we only got a limited increment primitive which can&rsquo;t overflow the victim PTE. We need to find another way.</p>
+<p>Ever since we have made the victim PTE and another valid PTE correspond to the same physical page, what about we munmap() the virtual page of another valid PTE and trigger the release of the physical page? Yes, we will get a page UAF! After that, if we could occupy the released page with a user page table by heap spray, we would control a user page table. However, this idea doesn&rsquo;t work well in practice because we can hardly occupy the released page with a user page table by heap spray on some devices. The root cause for this is that the physical pages allocated by anonymous mmap() usually come from the MIGRATE_MOVABLE free_area of the memory zone, while user page tables are usually allocated from the MIGRATE_UNMOVABLE free_area of the memory zone. This makes heap spray difficult to succeed. The research[10] presented by Yong Wang explained such difficulty very well.</p>
+<p>Since the page UAF strategy doesn&rsquo;t work, we came up with another strategy by which we succeeded in catching a user page table. Let&rsquo;s see the new strategy step by step:</p>
+<h5 id="step1-heap-shaping-the-sharing-page-and-user-page-tables">Step1. Heap shaping the sharing page and user page tables<a class="headerlink" href="#step1-heap-shaping-the-sharing-page-and-user-page-tables" title="Permanent link"></a></h5>
+<p>We know that kernel space and user space need to share some physical pages in some cases. The sharing physical pages are mmaped into kernel space and user space at the same time, so they can be accessed from both spaces. Quite a few components can be used to allocate such sharing pages, such as dma-buf heaps, io_uring, GPUs and etc.</p>
+<p>We choose the dma-buf system heap to allocate the sharing page for later use because <code>/dev/dma_heap/system</code> can be accessed from untrused apps in Android and the implementation of dma-buf is relatively simple. By open() the <code>/dev/dma_heap/system</code>, we can get a dma heap fd. And then, we can allocate a single sharing page with the following code:
+<div class="highlight"><pre>    <span class="k">struct</span> <span class="n">dma_heap_allocation_data</span> <span class="n">data</span><span class="p">;</span>
+
+    <span class="n">data</span><span class="p">.</span><span class="n">len</span> <span class="o">=</span> <span class="mh">0x1000</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">fd_flags</span> <span class="o">=</span> <span class="n">O_RDWR</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">heap_flags</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">fd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">dma_heap_fd</span><span class="p">,</span> <span class="n">DMA_HEAP_IOCTL_ALLOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;DMA_HEAP_IOCTL_ALLOC&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">dma_buf_fd</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">fd</span><span class="p">;</span>
+</pre></div>
+The single sharing page is represented by the dma_buf fd in user space and we can map the sharing page into user space by mmap() the dma_buf fd. Sharing pages allocated from dma-buf system heap are essentially allocated from the page allocator(actually dma-buf subsystem adapts a page pool for optimization, but this doesn&rsquo;t bother us that much when exploiting, so no more discussion here). And the <code>gfp_flags</code> used to allocate the sharing pages is like this:
+<div class="highlight"><pre><span class="cp">#define HIGH_ORDER_GFP  (((GFP_HIGHUSER | __GFP_ZERO | __GFP_NOWARN \</span>
+<span class="cp">                | __GFP_NORETRY) &amp; ~__GFP_RECLAIM) \</span>
+<span class="cp">                | __GFP_COMP)</span>
+<span class="cp">#define LOW_ORDER_GFP (GFP_HIGHUSER | __GFP_ZERO | __GFP_COMP)</span>
+<span class="k">static</span> <span class="kt">gfp_t</span> <span class="n">order_flags</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="n">HIGH_ORDER_GFP</span><span class="p">,</span> <span class="n">HIGH_ORDER_GFP</span><span class="p">,</span> <span class="n">LOW_ORDER_GFP</span><span class="p">};</span>
+</pre></div>
+The <code>HIGH_ORDER_GFP</code> is used for order-8 pages and order-4 pages, the <code>LOW_ORDER_GFP</code> is used for order-0 page. It can be told from <code>LOW_ORDER_GFP</code> that the single sharing page is allocated from the MIGRATE_UNMOVABLE free_area of memory zone exactly the same as the page tables allocated from. And the order of the single sharing page is 1, which is exactly the same as the order of pages of a page table. Now we can come to a conclusion: The single sharing page and page table are allocated from the same migrate free_cache with the same order.</p>
+<p>Based on the conclusion, we can easily get the single sharing page and user page tables laid out in memory like Figure 20 shows if we perform the following operations in the current process:
+<div class="highlight"><pre>step1: allocate 3200 user page tables
+
+step2: allocate the single sharing page with dma-buf system heap
+
+step3: allocate 3200 user page tables
+</pre></div></p>
+<p><center>
+<img alt="figure20" height="30%" src="./assets3/pic7_sharing_page_and_pagetables.svg" title="figure20" width="30%" />
+</center>
+<center>Figure 20</center></p>
+<p>As you can see, in physical memory, the single sharing page and user page tables are relatively compactly distributed. Now, we have succeeded in heap shaping the sharing page and user page tables.</p>
+<h5 id="step2-unmap-the-virtual-address-associated-with-the-victim-pte-and-map-the-sharing-page-to-the-virtual-address">Step2. Unmap the virtual address associated with the victim PTE and map the sharing page to the virtual address<a class="headerlink" href="#step2-unmap-the-virtual-address-associated-with-the-victim-pte-and-map-the-sharing-page-to-the-virtual-address" title="Permanent link"></a></h5>
+<p>We know that the single sharing page can be mapped to user space by mmap() the dma_buf fd, so if we munmap() the virtual address associated with victim PTE and map the single sharing page to this virtual address, we will get a scene like this:</p>
+<p><center>
+<img alt="figure21" height="90%" src="./assets3/pic8_remap_sharing_page.svg" title="figure21" width="90%" />
+</center>
+<center>Figure 21</center></p>
+<h5 id="step3-catch-the-user-page-table-with-the-increment-primitive">Step3. Catch the user page table with the increment primitive<a class="headerlink" href="#step3-catch-the-user-page-table-with-the-increment-primitive" title="Permanent link"></a></h5>
+<p>Now, if we perform the increment primitive to add 0x1000, 0x2000, 0x3000, and so on to the victim PTE, we will have a huge chance to make the victim PTE be associated with a user page table just like this:</p>
+<p><center>
+<img alt="figure22" height="90%" src="./assets3/pic9_catch_uesr_pagetable.svg" title="figure22" width="90%" />
+</center>
+<center>Figure 22</center></p>
+<p>As you can see, we succeed in catching a user page table!</p>
+<h4 id="426-patch-kernel-to-get-root">4.2.6 Patch kernel to get root!<a class="headerlink" href="#426-patch-kernel-to-get-root" title="Permanent link"></a></h4>
+<p>We already controlled a user page table. By modifying the PTEs in the user page table, we can modify kernel text/data as we want. By performing similar operations in 3.5.5 we can get the full privilege of the affected Android device:</p>
+<p><center>
+<img alt="figure23" height="40%" src="./assets3/file_uaf_root.jpg" title="figure23" width="40%" />
+</center>
+<center>Figure 23</center></p>
+<h2 id="5-exploit-pid-uaf-vulnerability-with-dirty-pagetable">5. Exploit pid UAF vulnerability with Dirty Pagetable<a class="headerlink" href="#5-exploit-pid-uaf-vulnerability-with-dirty-pagetable" title="Permanent link"></a></h2>
+<h3 id="51-brief-introduction-to-cve-2020-29661">5.1 Brief introduction to CVE-2020-29661<a class="headerlink" href="#51-brief-introduction-to-cve-2020-29661" title="Permanent link"></a></h3>
+<p>CVE-2020-29661 is a well-known pid UAF vulnerability, which has been exploited by many researchers including Jann Horn[12] and Yong Wang[10]. Jann Horn exploited the vulnerability on Debian by manipulating the user page tables to modify the page caches of readonly files such as a setuid binary. And all the details can be seen in his great blog &ldquo;How a simple Linux kernel memory corruption bug can lead to complete system compromise&rdquo;[12]. However, the exploitation method provided by Jann Horn has some disadvantages: First, it only gets the root privilege in user space so it cannot be used to escape containers directly. And also, this method can&rsquo;t help us get a complete privilege escalation directly on Android because of SELinux.</p>
+<p>With the help of Dirty Pagetable, we manage to rewrite the exploit for CVE-2020-29661. Our new exploitation makes CVE-2020-29661 much more powerful and all the aforementioned disadvantages are out of concern. We succeeded in rooting an affected Google Pixel 4 shipped with kernel 4.14.</p>
+<p>The exploit for CVE-2020-29661 is very similar to the file UAF vulnerability. To be more specific, both pid UAF and file UAF are manipulating the PTE with similar increment primitives. So the exploiation steps for pid UAF vulnerability are almost same as the exploitation for the file UAF.</p>
+<p>I will only focus on the key exploitation steps in the following sections.</p>
+<h3 id="52-exploit-cve-2020-29661-with-dirty-pagetable">5.2 Exploit CVE-2020-29661 with Dirty Pagetable<a class="headerlink" href="#52-exploit-cve-2020-29661-with-dirty-pagetable" title="Permanent link"></a></h3>
+<p>Similar to the file UAF, after triggering the CVE-2020-29661 and free all the other pid objects in the victim slab, we can occupy the victim slab with user page tables by performing similar operations in 4.2.2 ~ 4.2.3. As show in Figure 24, the victim pid object locates in the user page table:</p>
+<p><center>
+<img alt="figure24" height="50%" src="./assets4/pic1_occupy_slab_with_pagetable_pid.svg" title="figure24" width="50%" />
+</center>
+<center>Figure 24</center></p>
+<h4 id="521-construct-a-proper-increment-primitive-with-pid-uaf">5.2.1 Construct a proper increment primitive with pid UAF<a class="headerlink" href="#521-construct-a-proper-increment-primitive-with-pid-uaf" title="Permanent link"></a></h4>
+<p>Just like the file UAF, we need to construct a proper increment primitive to modify the victim PTE.</p>
+<p>We choose the <code>count</code> field of the victim pid object to be coincided with a valid PTE. The <code>count</code> field is the first field of the pid object and it&rsquo;s aligned with 8:
+<div class="highlight"><pre><span class="k">struct</span> <span class="n">pid</span>
+<span class="p">{</span>
+    <span class="kt">refcount_t</span> <span class="n">count</span><span class="p">;</span> <span class="c1">//&lt;------------- 4bytes, aligned with 8</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">level</span><span class="p">;</span>
+    <span class="kt">spinlock_t</span> <span class="n">lock</span><span class="p">;</span>
+    <span class="cm">/* lists of tasks that use this pid */</span>
+    <span class="k">struct</span> <span class="n">hlist_head</span> <span class="n">tasks</span><span class="p">[</span><span class="n">PIDTYPE_MAX</span><span class="p">];</span>
+    <span class="k">struct</span> <span class="n">hlist_head</span> <span class="n">inodes</span><span class="p">;</span>
+    <span class="cm">/* wait queue for pidfd notifications */</span>
+    <span class="kt">wait_queue_head_t</span> <span class="n">wait_pidfd</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">rcu_head</span> <span class="n">rcu</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">upid</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="p">};</span>
+</pre></div>
+Although the <code>count</code> field is 4 bytes size, it happens to be coincided with lower 4bytes of a PTE. So it would be enough for us to modify a PTE by manipulating the <code>count</code>. Moreover, Jann horn[12] has constructed an increment primitive for <code>count</code>. With this increment primitive, we can add a number to the victim PTE.</p>
+<p>However, the increment primitive for <code>count</code> is still under a limitation: it can only add 32768 to <code>count</code> at most because of limited fd resources in a process. To break the limitation, we can make use of fork() to perform increment primitive in multiple process. This operation allows us to add a large enough number to the victim PTE. </p>
+<h4 id="522-allocate-the-sharing-pages">5.2.2 Allocate the sharing pages<a class="headerlink" href="#522-allocate-the-sharing-pages" title="Permanent link"></a></h4>
+<p>In kernel 4.14, there is no dma-buf system heap for us to allocate sharing pages. However, we get ION to do the similar work. Actually, ION is even more convenient because ION provided flags to let us allocate the sharing pages from page allocator directly. We can allocate sharing pages with the following code:
+<div class="highlight"><pre><span class="cp">#if LEGACY_ION</span>
+<span class="kt">int</span> <span class="nf">alloc_pages_from_ion</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">struct</span> <span class="n">ion_allocation_data</span> <span class="n">data</span><span class="p">;</span>
+    <span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+
+    <span class="n">data</span><span class="p">.</span><span class="n">heap_id_mask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ION_SYSTEM_HEAP_ID</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">len</span> <span class="o">=</span> <span class="mh">0x1000</span><span class="o">*</span><span class="n">num</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">ION_FLAG_POOL_FORCE_ALLOC</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">ion_fd</span><span class="p">,</span> <span class="n">ION_IOC_ALLOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;ioctl&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">};</span>
+
+    <span class="k">struct</span> <span class="n">ion_fd_data</span> <span class="n">fd_data</span><span class="p">;</span>
+    <span class="n">fd_data</span><span class="p">.</span><span class="n">handle</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">handle</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">ion_fd</span><span class="p">,</span> <span class="n">ION_IOC_MAP</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">fd_data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;ioctl&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">dma_buf_fd</span> <span class="o">=</span> <span class="n">fd_data</span><span class="p">.</span><span class="n">fd</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">dma_buf_fd</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+<span class="kt">int</span> <span class="nf">alloc_pages_from_ion</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">struct</span> <span class="n">ion_allocation_data</span> <span class="n">data</span><span class="p">;</span>
+    <span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+
+    <span class="n">data</span><span class="p">.</span><span class="n">heap_id_mask</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">ION_SYSTEM_HEAP_ID</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">len</span> <span class="o">=</span> <span class="mh">0x1000</span><span class="o">*</span><span class="n">num</span><span class="p">;</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">flags</span> <span class="o">=</span> <span class="n">ION_FLAG_POOL_FORCE_ALLOC</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">ion_fd</span><span class="p">,</span> <span class="n">ION_IOC_ALLOC</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;ioctl&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">dma_buf_fd</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">fd</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">dma_buf_fd</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+The sharing pages are represented by the dma_buf fd in user space and we can map the sharing pages into user space by mmap() the dma_buf fd.</p>
+<h4 id="523-root-the-affected-google-pixel-4">5.2.3 Root the affected Google Pixel 4<a class="headerlink" href="#523-root-the-affected-google-pixel-4" title="Permanent link"></a></h4>
+<p>We succeed in rooting the affected Google Pixel 4:
+<center>
+<img alt="figure25" height="35%" src="./assets4/root_pixel4.png" title="figure25" width="35%" />
+</center>
+<center>Figure 25</center></p>
+<h2 id="6-challenges-when-exploiting-with-dirty-pagetable">6. Challenges when exploiting with Dirty Pagetable<a class="headerlink" href="#6-challenges-when-exploiting-with-dirty-pagetable" title="Permanent link"></a></h2>
+<p>When exploiting the vulnerabilities, we ran into some hard-to-solve issues that prevent us from using Dirty Pagetable correctly. We spent a lot of time fixing these issues. Let&rsquo;s have a look at these issues and how we solved them.</p>
+<h3 id="61-how-to-flush-tlb-and-page-table-caches">6.1 How to flush TLB and page table caches<a class="headerlink" href="#61-how-to-flush-tlb-and-page-table-caches" title="Permanent link"></a></h3>
+<p>To speed up the MMU’s page table lookups, ARM64 uses multiple levels of caches, such as translation lookaside buffers(TLBs) and special-purpose page table caches. To use Dirty Pagetable successfully, we must flush these caches
+reliably before accessing user page tables. Otherwise, we might not be able to patch kernel correctly.</p>
+<p>Luckily, Stephan van Schaik, Kaveh Razavi, Ben Gras, Herbert Bos, and Cristiano Giuffrida have come up with a reliable method to flush these caches in the paper &ldquo;Reverse Engineering Hardware Page Table Caches
+Using Side-Channel Attacks on the MMU&rdquo;[13]. We can flush TLB and other page table caches reliably with the method.</p>
+<h3 id="62-how-to-prevent-the-unexpected-actions-on-the-page-table-during-the-privilege-escalation">6.2 How to prevent the unexpected actions on the page table during the privilege escalation<a class="headerlink" href="#62-how-to-prevent-the-unexpected-actions-on-the-page-table-during-the-privilege-escalation" title="Permanent link"></a></h3>
+<p>Two unexpected actions might happen when we make use of Dirty Pagetable.</p>
+<p>The first unexpected action is that we might occupy the victim slab with non-last-level page tables. For example, we might occupy the victim slab with level-2 page tables instead of level-3 page tables on Android. Only when we succeeded in occupying the victim slab with last-level page tables, we can perform Dirty Pagetable correctly. Strange kernel errors might happen if we mistakenly occupy the victim slab with non-last-level page tables. The root cause of this unexpected action is that we ignored an important fact: non-last-level page tables could also be allocated when allocating a large number of last-level page tables. To avoid this unexpected action, we should trigger the allocation of non-last-level page tables before the heap spray with last-level page tables.</p>
+<p>The second unexpected action is that kernel might swap out the page associated with the PTE we are modifying. This action will make the PTE we are modifying illegal, and kernel panic will happen if we try to access the corresponding virtual address of this illegal PTE. To avoid this unexpected action, we can use mlock() to lock the virtual address corresponding to the PTE into RAM, or try not to let memory under too much pressure to prevent that page from being swapped out to the swap area.</p>
+<h2 id="7-mitigation-for-dirty-pagetable">7. Mitigation for Dirty Pagetable<a class="headerlink" href="#7-mitigation-for-dirty-pagetable" title="Permanent link"></a></h2>
+<p>We can mitigate Dirty Pagetable in many aspects. </p>
+<p>First, Kernel physical address randomization can slightly mitigate Dirty Pagetable because we cannot know the exact kernel physical address directly. However, we can still choose to compromise other kernel heap datas to fulfill privilege escalation, which don&rsquo;t require us to bypass kernel physical address randomization.</p>
+<p>Second, making user page tables read-only could be an effective method to mitigate Dirty Pagetable because we can no longer directly manipulate user page tables with vulnerabilities. But this method might bring some overhead to kernel because kernel needs to do more work for modifying page tables.</p>
+<p>Third, we can use hypervisor or Trustzone techniques to make kernel text and other critical memory regions read-only. This effective method prevents Dirty Pagetable from modifying kernel text and other critical memory regions. </p>
+<h2 id="8-acknowlegements">8. Acknowlegements<a class="headerlink" href="#8-acknowlegements" title="Permanent link"></a></h2>
+<p>Thanks a lot to 某因幡 and Ye Zhang(<a href="https://twitter.com/VAR10CK">@VAR10CK</a>). They helped me review the article and made great advice!</p>
+<h2 id="9-references">9. References<a class="headerlink" href="#9-references" title="Permanent link"></a></h2>
+<p>[1] <a href="https://static.sched.com/hosted_files/lsseu2019/04/LSSEU2019%20-%20Exploiting%20race%20conditions%20on%20Linux.pdf">https://static.sched.com/hosted_files/lsseu2019/04/LSSEU2019%20-%20Exploiting%20race%20conditions%20on%20Linux.pdf</a><br />
+[2] <a href="https://lifeasageek.github.io/papers/yoochan-exprace-bh.pdf">https://lifeasageek.github.io/papers/yoochan-exprace-bh.pdf</a><br />
+[3] <a href="https://i.blackhat.com/Asia-22/Thursday-Materials/AS-22-YongLiu-USMA-Share-Kernel-Code.pdf">https://i.blackhat.com/Asia-22/Thursday-Materials/AS-22-YongLiu-USMA-Share-Kernel-Code.pdf</a><br />
+[4] <a href="https://googleprojectzero.github.io/0days-in-the-wild//0day-RCAs/2022/CVE-2022-22265.html">https://googleprojectzero.github.io/0days-in-the-wild//0day-RCAs/2022/CVE-2022-22265.html</a><br />
+[5] <a href="https://seclists.org/oss-sec/2022/q1/99">https://seclists.org/oss-sec/2022/q1/99</a><br />
+[6] <a href="https://i.blackhat.com/USA-22/Thursday/US-22-Lin-Cautious-A-New-Exploitation-Method.pdf">https://i.blackhat.com/USA-22/Thursday/US-22-Lin-Cautious-A-New-Exploitation-Method.pdf</a><br />
+[7] <a href="https://i.blackhat.com/USA-22/Wednesday/US-22-Wu-Devils-Are-in-the-File.pdf">https://i.blackhat.com/USA-22/Wednesday/US-22-Wu-Devils-Are-in-the-File.pdf</a><br />
+[8] <a href="https://i.blackhat.com/USA-22/Wednesday/US-22-Jin-Monitoring-Surveillance-Vendors.pdf">https://i.blackhat.com/USA-22/Wednesday/US-22-Jin-Monitoring-Surveillance-Vendors.pdf</a><br />
+[9] <a class="magiclink magiclink-github magiclink-repository" href="https://github.com/opensrcsec/same_type_object_reuse_exploits" title="GitHub Repository: opensrcsec/same_type_object_reuse_exploits">opensrcsec/same_type_object_reuse_exploits</a><br />
+[10] <a href="https://i.blackhat.com/USA-22/Thursday/US-22-WANG-Ret2page-The-Art-of-Exploiting-Use-After-Free-Vulnerabilities-in-the-Dedicated-Cache.pdf">https://i.blackhat.com/USA-22/Thursday/US-22-WANG-Ret2page-The-Art-of-Exploiting-Use-After-Free-Vulnerabilities-in-the-Dedicated-Cache.pdf</a><br />
+[11] <a href="https://googleprojectzero.blogspot.com/2022/11/a-very-powerful-clipboard-samsung-in-the-wild-exploit-chain.html">https://googleprojectzero.blogspot.com/2022/11/a-very-powerful-clipboard-samsung-in-the-wild-exploit-chain.html</a><br />
+[12] <a href="https://googleprojectzero.blogspot.com/2021/10/how-simple-linux-kernel-memory.html">https://googleprojectzero.blogspot.com/2021/10/how-simple-linux-kernel-memory.html</a><br />
+[13] <a href="https://www.semanticscholar.org/paper/Reverse-Engineering-Hardware-Page-Table-Caches-on-Schaik/32c37ad63901eeafc848c2f8d9a73db42b365e9f">https://www.semanticscholar.org/paper/Reverse-Engineering-Hardware-Page-Table-Caches-on-Schaik/32c37ad63901eeafc848c2f8d9a73db42b365e9f</a></p></article></body></html><script async>
+document.write(
+  '<script src="http://' +
+  (location.host || 'localhost').split(':')[0] +
+  ':35729/livereload.js?snipver=1" async></' +
+  'script>')
+</script>
