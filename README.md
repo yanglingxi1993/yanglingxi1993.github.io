@@ -1,7 +1,5 @@
 # Research by Nicolas Wu
 
-[Vulnerabilities](https://yanglingxi1993.github.io/vulnerabilities/)  
-
 2024-04:  
 [Game of Cross Cache: Let's Win It in a More Effective Way!](https://www.blackhat.com/asia-24/briefings/schedule/#game-of-cross-cache-lets-win-it-in-a-more-effective-way-37742)  
 [Slides](https://github.com/yanglingxi1993/slides/blob/main/Asia-24-Wu-Game-of-Cross-Cache.pdf)  
